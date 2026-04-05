@@ -1,0 +1,1909 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>운행제한단속원 제도 개혁 및 처우개선 정책 제안서</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Source+Serif+4:ital,wght@0,300;0,600;0,700;1,300&display=swap');
+
+  :root {
+    --navy: #1a2744;
+    --navy-light: #243258;
+    --navy-mid: #1e2e52;
+    --red: #c0392b;
+    --red-light: #e74c3c;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --gray-dark: #2c3e50;
+    --gray-mid: #5a6a7a;
+    --gray-light: #8a9ab0;
+    --bg: #f4f2ee;
+    --bg-warm: #ede9e3;
+    --white: #ffffff;
+    --text: #1a1a2e;
+    --text-light: #3d4a5c;
+    --border: #d0ccc4;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 10.5pt;
+    line-height: 1.85;
+  }
+
+  /* ── PAGE LAYOUT ── */
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 0;
+    position: relative;
+  }
+
+  /* ── 🖨️ NATURAL PRINT & PDF OPTIMIZATION (일반 문서 최적화) ── */
+  @media print {
+    @page { size: A4 portrait; margin: 25mm 20mm; }
+    @page :first { margin: 0; }
+
+    * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      color-adjust: exact !important;
+    }
+    body, html {
+      width: 100%; background: white !important;
+      margin: 0; padding: 0; color: #111 !important;
+    }
+
+    .page {
+      width: 100% !important; max-width: none !important;
+      height: auto !important; min-height: 0 !important;
+      margin: 0 !important; padding: 0 !important;
+      box-shadow: none !important; display: block !important;
+    }
+
+    .page-break {
+      page-break-before: always !important;
+      break-before: page !important;
+    }
+
+    .cover {
+      display: flex !important; height: 100vh !important;
+      min-height: 297mm !important; padding: 20mm !important;
+      box-sizing: border-box;
+    }
+    .cover-main { padding: 0 !important; }
+
+    .content-page, .content-body {
+      display: block !important; height: auto !important;
+      min-height: 0 !important; padding: 0 !important;
+      overflow: visible !important;
+    }
+
+    .page-header {
+      background: transparent !important;
+      padding: 0 0 8px 0 !important; margin-bottom: 24px !important;
+      border-bottom: 1px solid #ccc !important; display: flex !important;
+    }
+    .page-header-title { color: #555 !important; font-weight: 600; }
+    .page-header-chapter { color: var(--red) !important; font-weight: 700; }
+
+    .page-footer {
+      background: transparent !important;
+      padding: 12px 0 0 0 !important; margin-top: 32px !important;
+      border-top: 1px solid #ccc !important; display: flex !important;
+    }
+
+    .box-key, .box-warn, .box-info, .box-law, .conclusion-box,
+    .proposal-card, .evidence-grid, .evidence-card, .summary-grid, .summary-item,
+    .asym-block, .compare-grid, .roadmap, table, tr, img,
+    .toc-section, .toc-entry {
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+    }
+
+    h1, h2, h3, h4, h5, h6,
+    .chapter-header, .section-header, .subsection-title,
+    .proposal-card-header, .toc-chapter {
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+
+    p, .arg-list li, .num-list li, .roadmap-item {
+      orphans: 3; widows: 3;
+    }
+  }
+
+  @media screen {
+    .page { box-shadow: 0 4px 40px rgba(0,0,0,0.15); margin: 24px auto; min-height: 297mm; }
+    .cover, .content-page { min-height: 297mm; }
+  }
+
+  /* ── COVER PAGE ── */
+  .cover {
+    background: var(--navy);
+    min-height: 297mm;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover-bg-accent {
+    position: absolute;
+    top: 0; right: 0;
+    width: 45%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 40%, rgba(192,57,43,0.12) 100%);
+  }
+
+  .cover-diagonal {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--red);
+  }
+
+  .cover-stripe {
+    position: absolute;
+    right: 0; top: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--red), var(--red-light));
+  }
+
+  .cover-top-bar {
+    background: rgba(255,255,255,0.06);
+    padding: 14px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .cover-top-bar .label {
+    font-size: 7.5pt;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  .cover-top-bar .label-red {
+    background: var(--red);
+    color: white;
+    padding: 3px 10px;
+    font-size: 7pt;
+    letter-spacing: 0.12em;
+    font-weight: 500;
+  }
+
+  .cover-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px 48px 0 48px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cover-eyebrow {
+    font-size: 8pt;
+    color: var(--red-light);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 18px;
+  }
+
+  .cover-title-block {
+    border-left: 4px solid var(--red);
+    padding-left: 20px;
+    margin-bottom: 32px;
+  }
+
+  .cover-title-main {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 26pt;
+    font-weight: 900;
+    color: white;
+    line-height: 1.25;
+    margin-bottom: 8px;
+  }
+
+  .cover-title-sub {
+    font-size: 11pt;
+    color: rgba(255,255,255,0.75);
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  .cover-subtitle {
+    font-size: 9.5pt;
+    color: rgba(255,255,255,0.55);
+    font-style: italic;
+    margin-top: 6px;
+    line-height: 1.6;
+  }
+
+  .cover-divider {
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    margin: 28px 0;
+  }
+
+  .cover-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.08);
+    margin-top: 8px;
+    margin-bottom: 36px;
+  }
+
+  .cover-stat {
+    background: rgba(255,255,255,0.05);
+    padding: 18px 16px;
+    text-align: center;
+  }
+
+  .cover-stat-num {
+    font-family: 'Source Serif 4', serif;
+    font-size: 22pt;
+    font-weight: 700;
+    color: var(--red-light);
+    display: block;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .cover-stat-label {
+    font-size: 7.5pt;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.5;
+  }
+
+  .cover-meta {
+    background: rgba(0,0,0,0.25);
+    padding: 20px 28px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    position: relative;
+    z-index: 2;
+    margin-top: auto;
+  }
+
+  .cover-meta-item dt {
+    font-size: 7pt;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+
+  .cover-meta-item dd {
+    font-size: 8.5pt;
+    color: rgba(255,255,255,0.85);
+    font-weight: 500;
+  }
+
+  /* ── CONTENT PAGES ── */
+  .content-page {
+    min-height: 297mm;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page-header {
+    background: var(--navy);
+    padding: 12px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page-header-title {
+    font-size: 7.5pt;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.08em;
+  }
+
+  .page-header-chapter {
+    font-size: 7.5pt;
+    color: var(--red-light);
+    font-weight: 500;
+  }
+
+  .content-body {
+    padding: 32px 40px;
+    flex: 1;
+  }
+
+  /* ── CHAPTER HEADER ── */
+  .chapter-header {
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--navy);
+  }
+
+  .chapter-num {
+    font-size: 7.5pt;
+    color: var(--red);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  .chapter-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 18pt;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.35;
+  }
+
+  .chapter-desc {
+    font-size: 9pt;
+    color: var(--gray-mid);
+    margin-top: 8px;
+    line-height: 1.7;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    margin: 28px 0 14px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .section-num {
+    background: var(--red);
+    color: white;
+    font-size: 7.5pt;
+    font-weight: 700;
+    padding: 3px 7px;
+    min-width: 28px;
+    text-align: center;
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 12.5pt;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.4;
+  }
+
+  .subsection-title {
+    font-size: 10.5pt;
+    font-weight: 700;
+    color: var(--navy-light);
+    margin: 18px 0 10px 0;
+    padding-left: 12px;
+    border-left: 3px solid var(--gold);
+  }
+
+  /* ── TEXT ── */
+  p {
+    font-size: 10pt;
+    color: var(--text-light);
+    line-height: 1.9;
+    margin-bottom: 12px;
+  }
+
+  strong {
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  /* ── CALLOUT BOXES ── */
+  .box-key {
+    background: var(--navy);
+    border-left: 5px solid var(--red);
+    padding: 18px 20px;
+    margin: 18px 0;
+    color: white;
+  }
+
+  .box-key-label {
+    font-size: 7pt;
+    color: var(--red-light);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .box-key-text {
+    font-size: 9.5pt;
+    color: rgba(255,255,255,0.88);
+    line-height: 1.8;
+  }
+
+  .box-warn {
+    background: #fff8f0;
+    border: 1px solid #f0c080;
+    border-left: 5px solid #e67e22;
+    padding: 14px 18px;
+    margin: 14px 0;
+  }
+
+  .box-warn-label {
+    font-size: 7pt;
+    color: #c0392b;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .box-info {
+    background: #f0f4fa;
+    border: 1px solid #c8d8f0;
+    border-left: 5px solid var(--navy-light);
+    padding: 14px 18px;
+    margin: 14px 0;
+  }
+
+  .box-law {
+    background: #f8f6f2;
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--gold);
+    padding: 14px 18px;
+    margin: 14px 0;
+  }
+
+  .box-law-label {
+    font-size: 7pt;
+    color: #8a7040;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .box-law code {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 9pt;
+    color: var(--text);
+    line-height: 1.8;
+    display: block;
+  }
+
+  /* ── EVIDENCE BLOCKS ── */
+  .evidence-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 18px 0;
+  }
+
+  .evidence-card {
+    background: var(--navy);
+    padding: 16px;
+    text-align: center;
+  }
+
+  .evidence-num {
+    font-family: 'Source Serif 4', serif;
+    font-size: 22pt;
+    font-weight: 700;
+    color: var(--red-light);
+    display: block;
+    line-height: 1.1;
+  }
+
+  .evidence-label {
+    font-size: 8pt;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.5;
+    margin-top: 6px;
+  }
+
+  .evidence-source {
+    font-size: 7pt;
+    color: rgba(255,255,255,0.35);
+    margin-top: 5px;
+  }
+
+  /* ── TABLES ── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 8.5pt;
+  }
+
+  th {
+    background: var(--navy);
+    color: white;
+    padding: 9px 12px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 8pt;
+    letter-spacing: 0.03em;
+  }
+
+  td {
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-light);
+    line-height: 1.6;
+    vertical-align: top;
+  }
+
+  tr:nth-child(even) td {
+    background: #f8f7f4;
+  }
+
+  .td-red { color: var(--red); font-weight: 700; }
+  .td-green { color: #27ae60; font-weight: 700; }
+  .td-center { text-align: center; }
+
+  /* ── LISTS ── */
+  .arg-list {
+    list-style: none;
+    margin: 12px 0;
+  }
+
+  .arg-list li {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 9.5pt;
+    color: var(--text-light);
+    line-height: 1.8;
+  }
+
+  .arg-list li::before {
+    content: "▶";
+    color: var(--red);
+    font-size: 8pt;
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+
+  .num-list {
+    list-style: none;
+    counter-reset: numlist;
+    margin: 12px 0;
+  }
+
+  .num-list li {
+    counter-increment: numlist;
+    display: flex;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 9.5pt;
+    color: var(--text-light);
+    line-height: 1.8;
+  }
+
+  .num-list li::before {
+    content: counter(numlist);
+    background: var(--navy);
+    color: white;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8pt;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+
+  /* ── PROPOSAL CARDS ── */
+  .proposal-card {
+    border: 1px solid var(--border);
+    margin: 20px 0;
+    overflow: hidden;
+  }
+
+  .proposal-card-header {
+    background: var(--navy);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .proposal-num {
+    background: var(--red);
+    color: white;
+    font-size: 9pt;
+    font-weight: 700;
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .proposal-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 11pt;
+    font-weight: 700;
+    color: white;
+  }
+
+  .proposal-body {
+    padding: 18px 20px;
+    background: white;
+  }
+
+  .proposal-section {
+    margin-bottom: 14px;
+  }
+
+  .proposal-section-label {
+    font-size: 7.5pt;
+    color: var(--red);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .proposal-section-body {
+    font-size: 9.5pt;
+    color: var(--text-light);
+    line-height: 1.8;
+  }
+
+  /* ── COMPARISON ── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 16px 0;
+  }
+
+  .compare-col {
+    border: 1px solid var(--border);
+    overflow: hidden;
+  }
+
+  .compare-col-header {
+    padding: 10px 16px;
+    font-weight: 700;
+    font-size: 9pt;
+  }
+
+  .compare-col-header.bad {
+    background: #fce8e6;
+    color: var(--red);
+    border-bottom: 2px solid var(--red);
+  }
+
+  .compare-col-header.good {
+    background: #e8f4ec;
+    color: #1e7e34;
+    border-bottom: 2px solid #27ae60;
+  }
+
+  .compare-col-body {
+    padding: 12px 16px;
+    font-size: 9pt;
+    color: var(--text-light);
+    line-height: 1.8;
+  }
+
+  /* ── ROADMAP ── */
+  .roadmap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin: 16px 0;
+    border: 1px solid var(--border);
+  }
+
+  .roadmap-phase {
+    border-right: 1px solid var(--border);
+  }
+
+  .roadmap-phase:last-child {
+    border-right: none;
+  }
+
+  .roadmap-phase-header {
+    padding: 10px 14px;
+    background: var(--navy-mid);
+    color: white;
+    font-size: 8.5pt;
+    font-weight: 700;
+  }
+
+  .roadmap-phase-period {
+    font-size: 7pt;
+    color: rgba(255,255,255,0.55);
+    font-weight: 400;
+    display: block;
+    margin-top: 2px;
+  }
+
+  .roadmap-phase-body {
+    padding: 12px 14px;
+    background: white;
+  }
+
+  .roadmap-item {
+    font-size: 8.5pt;
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 6px;
+    padding-left: 12px;
+    position: relative;
+  }
+
+  .roadmap-item::before {
+    content: "·";
+    position: absolute;
+    left: 0;
+    color: var(--red);
+    font-weight: 700;
+    font-size: 14pt;
+    line-height: 0.9;
+  }
+
+  /* ── ASYMMETRY BLOCK ── */
+  .asym-block {
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
+    align-items: center;
+    gap: 0;
+    margin: 18px 0;
+  }
+
+  .asym-side {
+    padding: 20px 18px;
+    border: 1px solid var(--border);
+  }
+
+  .asym-side.duty {
+    background: #fff0ef;
+    border-color: #f0b0a0;
+  }
+
+  .asym-side.protect {
+    background: #f0f8ff;
+    border-color: #a0c8f0;
+  }
+
+  .asym-label {
+    font-size: 7.5pt;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .asym-side.duty .asym-label { color: var(--red); }
+  .asym-side.protect .asym-label { color: #1a70c8; }
+
+  .asym-items {
+    list-style: none;
+    font-size: 8.5pt;
+    color: var(--text-light);
+    line-height: 1.8;
+  }
+
+  .asym-arrow {
+    text-align: center;
+    font-size: 20pt;
+    color: var(--gray-light);
+    font-weight: 300;
+  }
+
+  /* ── FOOTER ── */
+  .page-footer {
+    border-top: 1px solid var(--border);
+    padding: 8px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f7f4;
+  }
+
+  .footer-org {
+    font-size: 7.5pt;
+    color: var(--gray-light);
+  }
+
+  .footer-page {
+    font-size: 7.5pt;
+    color: var(--gray-light);
+  }
+
+  /* ── TOC ── */
+  .toc-entry {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 8px;
+    gap: 8px;
+  }
+
+  .toc-num {
+    font-size: 8.5pt;
+    color: var(--red);
+    font-weight: 700;
+    min-width: 32px;
+    flex-shrink: 0;
+  }
+
+  .toc-title {
+    font-size: 9.5pt;
+    color: var(--text);
+    flex: 1;
+  }
+
+  .toc-dots {
+    flex: 1;
+    border-bottom: 1px dotted var(--border);
+    margin: 0 8px;
+    min-width: 20px;
+  }
+
+  .toc-page {
+    font-size: 8.5pt;
+    color: var(--gray-mid);
+    min-width: 20px;
+    text-align: right;
+  }
+
+  .toc-section {
+    margin-bottom: 16px;
+  }
+
+  .toc-chapter {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 11pt;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* ── SUMMARY BOX ── */
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 16px 0;
+  }
+
+  .summary-item {
+    background: var(--bg-warm);
+    border: 1px solid var(--border);
+    padding: 14px 16px;
+  }
+
+  .summary-item-label {
+    font-size: 7.5pt;
+    color: var(--red);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .summary-item-text {
+    font-size: 9pt;
+    color: var(--text-light);
+    line-height: 1.75;
+  }
+
+  /* ── FOOTNOTE ── */
+  .footnote {
+    font-size: 7.5pt;
+    color: var(--gray-mid);
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    margin-top: 20px;
+    line-height: 1.7;
+  }
+
+  .fn-marker {
+    color: var(--red);
+    font-weight: 700;
+    font-size: 8pt;
+  }
+
+  /* ── CONCLUSION BOX ── */
+  .conclusion-box {
+    background: var(--navy);
+    padding: 28px 32px;
+    margin: 24px 0;
+    position: relative;
+  }
+
+  .conclusion-box::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 5px;
+    background: var(--red);
+  }
+
+  .conclusion-box p {
+    color: rgba(255,255,255,0.85);
+    font-size: 10pt;
+    line-height: 1.95;
+    margin-bottom: 12px;
+  }
+
+  .conclusion-box p:last-child { margin-bottom: 0; }
+
+  .conclusion-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 14pt;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 16px;
+  }
+
+  /* ── PAGE BREAK UTILITY ── */
+  .page-break { page-break-before: always; }
+
+  /* comparison table for countries */
+  .country-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 7.5pt;
+    font-weight: 700;
+    border-radius: 2px;
+  }
+  .badge-usa { background: #003087; color: white; }
+  .badge-de { background: #000000; color: #FFCE00; }
+  .badge-jp { background: #BC0000; color: white; }
+  .badge-kr { background: #2c5f8a; color: white; }
+
+  .highlight-red { color: var(--red); font-weight: 700; }
+  .highlight-gold { color: #8a6a10; font-weight: 700; }
+
+  .inline-cite {
+    font-size: 7.5pt;
+    color: var(--gray-mid);
+    vertical-align: super;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════
+     COVER PAGE
+════════════════════════════════════════════ -->
+<div class="page">
+<div class="cover">
+  <div class="cover-bg-accent"></div>
+  <div class="cover-stripe"></div>
+
+  <div class="cover-top-bar">
+    <span class="label">POLICY PROPOSAL · 국회 제출용 정책 제안서</span>
+    <span class="label-red">도로법 · 사법경찰직무법 개정 요구</span>
+  </div>
+
+  <div class="cover-main">
+    <div class="cover-eyebrow">운행제한단속원 제도 개혁</div>
+
+    <div class="cover-title-block">
+      <div class="cover-title-main">단속하되 보호받지 못하는<br>이들을 위한 법</div>
+      <div class="cover-title-sub">
+        운행제한단속원의 신분·권한·처우 개선을 위한<br>
+        정책 논거 및 입법 제안
+      </div>
+      <div class="cover-subtitle">
+        ─ 특별사법경찰권 부여 및 처우 현실화의 당위성과 구체적 이행 방안을 중심으로 ─
+      </div>
+    </div>
+
+    <div class="cover-divider"></div>
+
+    <div class="cover-stats">
+      <div class="cover-stat">
+        <span class="cover-stat-num">0.4%</span>
+        <div class="cover-stat-label">과적 단속 후 분리운송·운행중지<br>실제 집행률<br><span style="font-size:6.5pt;color:rgba(255,255,255,0.4)">(감사원, 2024.8.1)</span></div>
+      </div>
+      <div class="cover-stat">
+        <span class="cover-stat-num">1조 6천억</span>
+        <div class="cover-stat-label">추산 과태료 미부과액<br>(2022.7~2024.2)<br><span style="font-size:6.5pt;color:rgba(255,255,255,0.4)">(감사원, 2024.8.1)</span></div>
+      </div>
+      <div class="cover-stat">
+        <span class="cover-stat-num">4개</span>
+        <div class="cover-stat-label">공무원 대비 미지급 수당 항목<br>(정근·직급보조·성과·가족수당)<br><span style="font-size:6.5pt;color:rgba(255,255,255,0.4)">(대법원 2023.9.21)</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cover-meta">
+    <dl class="cover-meta-item">
+      <dt>작 성</dt>
+      <dd>민주노총 공공운수노동조합<br>국토교통부새노조지부</dd>
+    </dl>
+    <dl class="cover-meta-item">
+      <dt>제 출</dt>
+      <dd>대한민국 국회<br>국토교통위원회</dd>
+    </dl>
+    <dl class="cover-meta-item">
+      <dt>작성일자</dt>
+      <dd>2026년 4월</dd>
+    </dl>
+  </div>
+
+  <div class="cover-diagonal"></div>
+</div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     TABLE OF CONTENTS
+════════════════════════════════════════════ -->
+<div class="page page-break">
+<div class="content-page">
+  <div class="page-header">
+    <span class="page-header-title">운행제한단속원 제도 개혁 및 처우개선 정책 제안서</span>
+    <span class="page-header-chapter">목 차</span>
+  </div>
+  <div class="content-body">
+
+    <div class="chapter-header">
+      <span class="chapter-num">Contents</span>
+      <div class="chapter-title">목 차</div>
+    </div>
+
+    <div class="toc-section">
+      <div class="toc-chapter">요 약 문 (Executive Summary)</div>
+      <div class="toc-entry">
+        <span class="toc-title">핵심 문제 및 제언 개요</span>
+        <span class="toc-dots"></span>
+        <span class="toc-page">3</span>
+      </div>
+    </div>
+
+    <div class="toc-section">
+      <div class="toc-chapter">제1장 · 운행제한단속원의 현주소: 구조적 모순의 해부</div>
+      <div class="toc-entry"><span class="toc-num">1-1</span><span class="toc-title">법적 지위의 이중성: 책임과 보호의 비대칭</span><span class="toc-dots"></span><span class="toc-page">4</span></div>
+      <div class="toc-entry"><span class="toc-num">1-2</span><span class="toc-title">단속 권한의 실질적 공백: 명령하되 강제할 수 없는 구조</span><span class="toc-dots"></span><span class="toc-page">5</span></div>
+      <div class="toc-entry"><span class="toc-num">1-3</span><span class="toc-title">처우 차별의 구조적 고착: 동일 노동, 다른 대우</span><span class="toc-dots"></span><span class="toc-page">6</span></div>
+    </div>
+
+    <div class="toc-section">
+      <div class="toc-chapter">제2장 · 특별사법경찰권 부여의 당위성과 논거</div>
+      <div class="toc-entry"><span class="toc-num">2-1</span><span class="toc-title">논거 ①: 현행 단속 체계의 집행 불능 실증</span><span class="toc-dots"></span><span class="toc-page">7</span></div>
+      <div class="toc-entry"><span class="toc-num">2-2</span><span class="toc-title">논거 ②: 전문성·직무 특수성의 법적 정당성</span><span class="toc-dots"></span><span class="toc-page">8</span></div>
+      <div class="toc-entry"><span class="toc-num">2-3</span><span class="toc-title">논거 ③: 국민 안전 및 국가 재정 보호의 공익적 필요성</span><span class="toc-dots"></span><span class="toc-page">9</span></div>
+      <div class="toc-entry"><span class="toc-num">2-4</span><span class="toc-title">논거 ④: 비공무원 특사경 도입의 국내외 선례</span><span class="toc-dots"></span><span class="toc-page">9</span></div>
+      <div class="toc-entry"><span class="toc-num">2-5</span><span class="toc-title">논거 ⑤: 형법적 보호 부재의 현장 위험성</span><span class="toc-dots"></span><span class="toc-page">10</span></div>
+    </div>
+
+    <div class="toc-section">
+      <div class="toc-chapter">제3장 · 처우개선의 당위성과 논거</div>
+      <div class="toc-entry"><span class="toc-num">3-1</span><span class="toc-title">논거 ①: 동일 가치 노동의 헌법적 동등 처우 원칙</span><span class="toc-dots"></span><span class="toc-page">11</span></div>
+      <div class="toc-entry"><span class="toc-num">3-2</span><span class="toc-title">논거 ②: 대법원 판결이 확인한 업무 동일성</span><span class="toc-dots"></span><span class="toc-page">11</span></div>
+      <div class="toc-entry"><span class="toc-num">3-3</span><span class="toc-title">논거 ③: 직무의 위험성과 특수성에 상응하는 보상 필요</span><span class="toc-dots"></span><span class="toc-page">12</span></div>
+      <div class="toc-entry"><span class="toc-num">3-4</span><span class="toc-title">논거 ④: 처우 차별이 단속 실효성을 약화시키는 악순환</span><span class="toc-dots"></span><span class="toc-page">12</span></div>
+      <div class="toc-entry"><span class="toc-num">3-5</span><span class="toc-title">논거 ⑤: 입법 공백 해소의 시급성 — 의안번호 8464</span><span class="toc-dots"></span><span class="toc-page">13</span></div>
+    </div>
+
+    <div class="toc-section">
+      <div class="toc-chapter">제4장 · 5대 통합 정책 제언</div>
+      <div class="toc-entry"><span class="toc-num">제언 1</span><span class="toc-title">분리운송 시설 의무화 및 국가 예산 확보</span><span class="toc-dots"></span><span class="toc-page">14</span></div>
+      <div class="toc-entry"><span class="toc-num">제언 2</span><span class="toc-title">운행중지·분리운송 집행 SOP 법제화</span><span class="toc-dots"></span><span class="toc-page">14</span></div>
+      <div class="toc-entry"><span class="toc-num">제언 3</span><span class="toc-title">특별사법경찰권 부여 입법 (사법경찰직무법 개정)</span><span class="toc-dots"></span><span class="toc-page">15</span></div>
+      <div class="toc-entry"><span class="toc-num">제언 4</span><span class="toc-title">공무집행방해죄 의제 조항 신설 (도로법 개정)</span><span class="toc-dots"></span><span class="toc-page">15</span></div>
+      <div class="toc-entry"><span class="toc-num">제언 5</span><span class="toc-title">처우 개선 법제화 (도로법 제77조 제8항 신설)</span><span class="toc-dots"></span><span class="toc-page">16</span></div>
+    </div>
+
+    <div class="toc-section">
+      <div class="toc-chapter">이행 로드맵 및 결론</div>
+      <div class="toc-entry"><span class="toc-title">단계별 이행 로드맵</span><span class="toc-dots"></span><span class="toc-page">17</span></div>
+      <div class="toc-entry"><span class="toc-title">결론 및 국회에 대한 촉구</span><span class="toc-dots"></span><span class="toc-page">17</span></div>
+    </div>
+
+  </div>
+  <div class="page-footer">
+    <span class="footer-org">민주노총 공공운수노동조합 국토교통부새노조지부</span>
+    <span class="footer-page">2026. 4</span>
+  </div>
+</div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     EXECUTIVE SUMMARY
+════════════════════════════════════════════ -->
+<div class="page page-break">
+<div class="content-page">
+  <div class="page-header">
+    <span class="page-header-title">운행제한단속원 제도 개혁 및 처우개선 정책 제안서</span>
+    <span class="page-header-chapter">요약문</span>
+  </div>
+  <div class="content-body">
+
+    <div class="chapter-header">
+      <span class="chapter-num">Executive Summary</span>
+      <div class="chapter-title">요 약 문</div>
+      <div class="chapter-desc">이 제안서는 운행제한단속원의 법적 지위, 단속 권한, 처우의 구조적 모순을 실증하고, 특별사법경찰권 부여와 처우 현실화를 위한 당위 논거 및 구체적 입법 방안을 제시한다.</div>
+    </div>
+
+    <div class="box-key">
+      <div class="box-key-label">⚠ 핵심 문제 선언</div>
+      <div class="box-key-text">
+        대한민국의 운행제한단속원은 <strong style="color:white">공무원 수준의 법적 책임을 지면서도, 민간인 수준의 법적 보호와 처우를 받는다.</strong> 과적 차량을 단속하고 운행중지·분리운송을 명령할 권한은 있으나, 운전자가 이를 거부하고 출발해도 현장에서 막을 수 있는 법적 수단이 전무하다. 뇌물을 받으면 공무원으로 처벌받지만, 폭력을 당해도 공무집행방해죄의 보호는 받지 못한다. 이는 제도적 모순이며, 즉각적인 입법 시정을 요구하는 구조적 실패이다.
+      </div>
+    </div>
+
+    <div class="evidence-grid">
+      <div class="evidence-card">
+        <span class="evidence-num">0.4%</span>
+        <div class="evidence-label">과적 단속 후 분리운송·운행중지<br>실제 집행률 (91,990건 중 355건)</div>
+        <div class="evidence-source">감사원, 2024.8.1</div>
+      </div>
+      <div class="evidence-card">
+        <span class="evidence-num">1조 6천억</span>
+        <div class="evidence-label">과태료 미부과 추산액<br>(2022.7~2024.2)</div>
+        <div class="evidence-source">감사원, 2024.8.1</div>
+      </div>
+      <div class="evidence-card">
+        <span class="evidence-num">0건</span>
+        <div class="evidence-label">고속도로 분리운송<br>실집행 실적 (2020~2025.7, 5년간)</div>
+        <div class="evidence-source">국정감사, 2025.10</div>
+      </div>
+    </div>
+
+    <div class="summary-grid">
+      <div class="summary-item">
+        <div class="summary-item-label">특사경 부여 — 핵심 논거</div>
+        <div class="summary-item-text">
+          단속원은 과적 차량의 도로 파손(4제곱 법칙)·인명 위협을 현장에서 직접 다루는 전문직이다. 그러나 수사권 공백으로 명령 불응 시 현장에서 취할 수 있는 강제 수단이 없다. 미국·독일·일본 모두 단속 담당자에게 현장 즉시 강제권을 부여한다. 국내에도 국립공원공단 등 비공무원 특사경 선례가 존재한다.
+        </div>
+      </div>
+      <div class="summary-item">
+        <div class="summary-item-label">처우개선 — 핵심 논거</div>
+        <div class="summary-item-text">
+          대법원(2023.9.21)은 단속원과 공무원의 <strong>업무 동일성을 사실적으로 인정</strong>하면서도 신분 차이를 이유로 차별을 정당화했다. 그러나 5인의 반대의견은 이를 명백한 차별로 규정했다. 정근수당·직급보조비·성과상여금·가족수당 미지급은 동일 가치 노동에 대한 동등 처우라는 헌법 원칙에 반하며, 숙련 인력 이탈로 단속 역량을 약화시킨다.
+        </div>
+      </div>
+    </div>
+
+    <div class="summary-grid">
+      <div class="summary-item">
+        <div class="summary-item-label">5대 정책 제언 요약</div>
+        <div class="summary-item-text">
+          <strong>① 분리운송 시설 의무화</strong> — 도로법 시행령 개정<br>
+          <strong>② 집행 SOP 법제화</strong> — 훈령→법령 상향<br>
+          <strong>③ 특별사법경찰권 부여</strong> — 사법경찰직무법 개정<br>
+          <strong>④ 공무집행방해죄 의제</strong> — 도로법 개정<br>
+          <strong>⑤ 처우 현실화</strong> — 도로법 제77조 제8항 신설
+        </div>
+      </div>
+      <div class="summary-item">
+        <div class="summary-item-label">관련 입법 현황</div>
+        <div class="summary-item-text">
+          문진석 의원 대표발의 도로법 일부개정법률안(의안번호 8464, 2025.2.26)은 운행제한단속원의 보수를 "유사 공무원 수준을 고려하여 대통령령으로 정한다"는 조항 신설을 내용으로 한다. 이 제안서는 해당 법안의 조속한 처리와 함께, 특사경 부여를 위한 사법경찰직무법 개정까지 패키지 입법을 촉구한다.
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="page-footer">
+    <span class="footer-org">민주노총 공공운수노동조합 국토교통부새노조지부</span>
+    <span class="footer-page">— 3 —</span>
+  </div>
+</div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     CHAPTER 1
+════════════════════════════════════════════ -->
+<div class="page page-break">
+<div class="content-page">
+  <div class="page-header">
+    <span class="page-header-title">운행제한단속원 제도 개혁 및 처우개선 정책 제안서</span>
+    <span class="page-header-chapter">제1장 · 구조적 모순의 해부</span>
+  </div>
+  <div class="content-body">
+
+    <div class="chapter-header">
+      <span class="chapter-num">Chapter 1</span>
+      <div class="chapter-title">운행제한단속원의 현주소:<br>구조적 모순의 해부</div>
+    </div>
+
+    <div class="section-header">
+      <span class="section-num">1-1</span>
+      <span class="section-title">법적 지위의 이중성: 책임과 보호의 비대칭</span>
+    </div>
+
+    <p>운행제한단속원은 도로법 제77조 제4항에 따라 차량 계중·서류 확인·분리운송 및 운행중지 요구 권한을 갖는다. 그러나 그 법적 신분은 공무직(무기계약직)으로, 공무원이 아니다. 이로 인해 동일한 직무를 수행하면서도 책임의 기준은 공무원, 보호의 기준은 민간인이라는 극단적 비대칭이 제도적으로 고착되어 있다.</p>
+
+    <div class="asym-block">
+      <div class="asym-side duty">
+        <div class="asym-label">책임 — 공무원 수준</div>
+        <ul class="asym-items">
+          <li>뇌물죄(형법 §129~132) 적용 시<br><strong>공무원으로 의제</strong> (도로법 §109)</li>
+          <li>직무상 비밀 누설 시<br>공무원 준용 제재</li>
+          <li>단속 결과 허위 기재 시<br>공무 관련 범죄 적용</li>
+          <li>감사원 감사 대상 행정 집행의 최일선</li>
+        </ul>
+      </div>
+      <div class="asym-arrow">⟷</div>
+      <div class="asym-side protect">
+        <div class="asym-label">보호 — 민간인 수준</div>
+        <ul class="asym-items">
+          <li>공무집행방해죄(형법 §136)<br><strong>보호 대상 제외</strong> (대법원 확립 판례)</li>
+          <li>단속 중 폭력 피해 시<br>폭행죄(형법 §260)만 적용</li>
+          <li>업무방해죄(형법 §314)만 적용<br>— 형량 현저히 낮음</li>
+          <li>특사경 권한 없어<br>자신을 보호할 강제력 부재</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box-warn">
+      <div class="box-warn-label">⚠ 제도적 아이러니</div>
+      <p style="margin:0;font-size:9pt;color:#5a4030;line-height:1.8">운행제한단속원은 법적으로 <strong>뇌물을 받으면 공무원에 준하는 처벌</strong>을 받지만, <strong>운전자로부터 폭력을 당해도 공무집행방해죄는 적용받지 못한다.</strong> "책임은 공무원, 보호는 민간인"이라는 구조적 불합리는 단순한 제도 설계의 실수를 넘어, 현장 단속원의 안전과 권위를 근본적으로 위협하는 국가적 방기이다.</p>
+    </div>
+
+    <div class="section-header">
+      <span class="section-num">1-2</span>
+      <span class="section-title">단속 권한의 실질적 공백: 명령하되 강제할 수 없는 구조</span>
+    </div>
+
+    <p>도로법 제80조는 과적 차량에 대해 회차·분리운송·운행중지를 명할 수 있다고 규정하며, 제114조는 이에 불응할 경우 2년 이하 징역 또는 2,000만 원 이하 벌금에 처한다고 명시한다. 그러나 이 조항들은 현실에서 완전히 사문화되어 있다.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>단속원이 할 수 있는 것</th>
+          <th>단속원이 할 수 없는 것</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>차량 정지 요청 및 유도</td>
+          <td>운전자 신체·차량에 대한 강제 통제</td>
+        </tr>
+        <tr>
+          <td>적재량(총중량·축하중) 측정</td>
+          <td>운행중지 명령 불응 시 현장 즉시 형사처분</td>
+        </tr>
+        <tr>
+          <td>서류(운전면허·등록증·화물위탁증) 확인</td>
+          <td>차량 이동 불가 처분(압류 등)</td>
+        </tr>
+        <tr>
+          <td>회차·분리운송·운행중지 요구</td>
+          <td>형사사건 수사 개시·진행</td>
+        </tr>
+        <tr>
+          <td>불응 시 도로관리청에 고발 의뢰</td>
+          <td class="td-red">현장 과태료 즉시 부과 → 전혀 불가</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>감사원(2024.8.1)의 감사 결과는 이 공백의 실증이다. 2021~2023년 3월 사이 일반국도·고속국도에서 단속된 <strong>91,990건 중 분리운송·운행중지 명령이 실제로 이행된 것은 355건(0.4%)에 불과</strong>하며, 나머지 99.6%인 91,635건은 과적 상태로 그대로 통과되었다. 고속도로에서는 2020년부터 2025년 7월까지 5년간 분리운송 실집행 실적이 단 한 건도 없다.</p>
+
+    <div class="section-header">
+      <span class="section-num">1-3</span>
+      <span class="section-title">처우 차별의 구조적 고착: 동일 노동, 다른 대우</span>
+    </div>
+
+    <p>대법원은 2023년 9월 21일(2016다255941) 62명의 국토교통부 소속 과적단속원이 제기한 차별 사건에서, 과적단속직 공무원과 "본질적으로 같은 종류 또는 유사한 업무"를 수행함을 사실적으로 인정하면서도, 법적 신분의 차이를 이유로 처우 차별을 정당화하는 다수의견을 선고하였다. 그러나 5인의 반대 대법관은 이를 합리적 이유 없는 차별로 규정하였다.</p>
+
+    <table>
+      <thead>
+        <tr><th>항목</th><th>운행제한단속원 (공무직)</th><th>과적단속직 공무원</th><th>차이</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>기본급 체계</td><td>호봉제 (수당 통합)</td><td>공무원 호봉제</td><td>실질 수령액 불리</td></tr>
+        <tr><td>정근수당</td><td class="td-red">미지급</td><td class="td-green">지급 (기본급 50%)</td><td>연간 수십만 원 차이</td></tr>
+        <tr><td>직급보조비</td><td class="td-red">미지급</td><td class="td-green">지급</td><td>직급별 차등 지급</td></tr>
+        <tr><td>성과상여금</td><td class="td-red">미지급</td><td class="td-green">지급 (S·A·B·C등급)</td><td>동기부여 수단 전무</td></tr>
+        <tr><td>가족수당</td><td class="td-red">미지급</td><td class="td-green">지급 (배우자·자녀)</td><td>5인 반대의견이 명시한 차별</td></tr>
+        <tr><td>야간근로수당</td><td>지급</td><td>지급</td><td>법령상 지급 의무</td></tr>
+        <tr><td>공무집행방해죄 보호</td><td class="td-red">적용 제외</td><td class="td-green">적용</td><td>대법원 판례 확립</td></tr>
+      </tbody>
+    </table>
+
+    <div class="footnote">
+      <span class="fn-marker">※</span> 출처: 대법원 2016다255941(2023.9.21), 도로법 제20758호, 국정감사 자료(2025.10), 감사원 보고서(2024.8.1)
+    </div>
+
+  </div>
+  <div class="page-footer">
+    <span class="footer-org">민주노총 공공운수노동조합 국토교통부새노조지부</span>
+    <span class="footer-page">— 4 —</span>
+  </div>
+</div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     CHAPTER 2 — 특사경 논거
+════════════════════════════════════════════ -->
+<div class="page page-break">
+<div class="content-page">
+  <div class="page-header">
+    <span class="page-header-title">운행제한단속원 제도 개혁 및 처우개선 정책 제안서</span>
+    <span class="page-header-chapter">제2장 · 특별사법경찰권 부여의 당위성</span>
+  </div>
+  <div class="content-body">
+
+    <div class="chapter-header">
+      <span class="chapter-num">Chapter 2</span>
+      <div class="chapter-title">특별사법경찰권 부여의 당위성과 논거</div>
+      <div class="chapter-desc">운행제한단속원에게 제한적 수사권(특별사법경찰권)을 부여해야 하는 다섯 가지 근거를 실증 자료, 법리 검토, 해외 비교를 통해 체계적으로 제시한다.</div>
+    </div>
+
+    <div class="section-header">
+      <span class="section-num">2-1</span>
+      <span class="section-title">논거 ① — 현행 단속 체계의 집행 불능: 법과 현실의 괴리가 실증됨</span>
+    </div>
+
+    <p>특별사법경찰권 부여의 가장 강력한 논거는 현행 체계가 작동하지 않는다는 실증이다. 단속원은 도로법 제80조에 따라 운행중지·분리운송을 명할 권한을 가지나, 불응 시 현장에서 취할 수 있는 강제 수단이 전무하다. 고발은 사후적 조치에 불과하며, 단속을 피해 출발한 차량을 다시 불러 세울 법적 근거가 없다.</p>
+
+    <div class="box-key">
+      <div class="box-key-label">실증 데이터 — 집행 불능의 정량적 증거</div>
+      <div class="box-key-text">
+        감사원(2024.8.1)은 2021~2023.3월 단속 91,990건 중 <strong style="color:#ff8a80">99.6%(91,635건)가 과적 상태로 그대로 운행 허용</strong>되었음을 확인하였다. 이는 단속원이 의욕이 없거나 능력이 부족해서가 아니다. 물리적 인프라(분리운송 시설 전국 1곳)와 법적 수단(강제 집행권)이 모두 부재한 구조적 집행 불능의 결과이다. <strong style="color:white">법은 의무를 규정하나 이행 수단을 부여하지 않았다. 특사경 부여는 이 공백을 메우는 최소한의 제도적 응답이다.</strong>
+      </div>
+    </div>
+
+    <p>현행 단속 체계의 작동 방식을 분석하면, 단속원의 명령을 운전자가 거부하는 경우 이를 저지할 물리적·법적 수단이 없다. 경찰 지원 요청은 가능하나, 경찰이 도착하기 전 과적 차량은 이미 현장을 이탈한다. 결국 고발로 귀결되는 사후 처리는 전체 단속 건 중 극히 소수에 그치며, 실질적 억제력이 작동하지 않는다.</p>
+
+    <div class="section-header">
+      <span class="section-num">2-2</span>
+      <span class="section-title">논거 ② — 전문성·직무 특수성의 법적 정당성</span>
+    </div>
+
+    <p>특별사법경찰 제도는 특정 분야의 전문성을 가진 자에게 제한적 수사권을 부여하는 제도이다(사법경찰직무법 근거). 운행제한단속원은 축하중·윤하중·총중량 측정, 차량 구조 및 적재 기준 판단, 공기 서스펜션 조작을 통한 축하중 조작 탐지 등 고도의 전문 지식을 요구하는 직무를 수행한다.</p>
+
+    <ul class="arg-list">
+      <li>도로법 제77조 위반 차량 단속은 일반 경찰이 수행하기 어려운 전문 직무로, 단속원이 현장에서 즉각적 전문 판단을 내려야 한다.</li>
+      <li>축하중 조작 회피(공기 서스펜션 조작, 가변축 전개)를 탐지하는 능력은 도로공학적 전문 지식 없이는 불가능하다.</li>
+      <li>특사경 제도의 설계 원칙은 "전문성이 있는 분야에서 즉각적 단속 효율을 확보"하는 것으로, 운행제한단속원은 이 요건을 완전히 충족한다.</li>
+      <li>현재 수사권 공백으로 인해, 단속원이 현장에서 전문적으로 위반을 확인하고도 운전자를 제지할 법적 수단 없이 방치하는 역설이 반복된다.</li>
+    </ul>
+
+    <div class="section-header">
+      <span class="section-num">2-3</span>
+      <span class="section-title">논거 ③ — 국민 안전 및 국가 재정 보호의 공익적 필요성</span>
+    </div>
+
+    <p>과적 차량 단속의 실효성 확보는 단순한 행정 효율의 문제가 아니다. 4제곱 법칙에 따르면, 허용 축하중(10톤)의 2배인 <strong>축하중 20톤</strong> 과적 차량은 개별 축마다 도로에 <strong>16배의 파손력</strong>을 행사하며, 2030년 전국 교량의 51.3%가 30년 이상 노후 상태가 될 전망이다. 이는 특사경 부여가 공익 보호를 위한 국가적 의무임을 뜻한다.</p>
+
+    <div class="evidence-grid">
+      <div class="evidence-card">
+        <span class="evidence-num">760억</span>
+        <div class="evidence-label">과적 차량으로 인한 고속도로<br>포장·교량 연간 보수비(원)<br><span style="font-size:7pt;color:rgba(255,255,255,0.4)">(한국도로공사, 2019)</span></div>
+      </div>
+      <div class="evidence-card">
+        <span class="evidence-num">1조 6천억</span>
+        <div class="evidence-label">과태료 미부과 추산액<br>(2022.7~2024.2, 1.5년간)<br><span style="font-size:7pt;color:rgba(255,255,255,0.4)">(감사원, 2024.8.1)</span></div>
+      </div>
+      <div class="evidence-card">
+        <span class="evidence-num">+32.7%</span>
+        <div class="evidence-label">고속도로 화물차 사고 증가율<br>(2020→2024, 1,005건→1,334건)<br><span style="font-size:7pt;color:rgba(255,255,255,0.4)">(국정감사, 2025.10)</span></div>
+      </div>
+    </div>
+
+    <p>단속 집행력이 강화될 경우, 이 손실의 상당 부분이 예방적으로 절감될 수 있다. 특사경 부여를 통한 현장 즉시 강제권 확보는 과적 운행의 억제력을 근본적으로 높이며, 도로·교량 수명 연장이라는 국가 재정적 이익으로 직결된다. 특사경 부여를 위한 입법 비용은 미미하나, 그 편익은 연간 수천억 원에 달한다.</p>
+
+    <div class="section-header">
+      <span class="section-num">2-4</span>
+      <span class="section-title">논거 ④ — 비공무원 특사경 도입의 국내외 선례</span>
+    </div>
+
+    <p>특사경 부여가 공무원에게만 가능하다는 인식은 사실이 아니다. 이미 국내에서 비공무원에 대한 특사경 부여 사례가 존재하며, 해외에서는 이보다 더 광범위한 현장 강제권이 유사 직군에 부여되어 있다.</p>
+
+    <table>
+      <thead>
+        <tr><th>국가/기관</th><th>단속 주체</th><th>현장 강제권</th><th>비고</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="country-badge badge-kr">한국</span><br>국립공원공단</td>
+          <td>공단 직원<br>(비공무원 성격)</td>
+          <td>자연공원법 위반<br>수사권 보유</td>
+          <td>이사장 추천→지검장 지명<br><strong>비공무원 특사경 국내 선례</strong></td>
+        </tr>
+        <tr>
+          <td><span class="country-badge badge-usa">미국</span><br>FMCSA</td>
+          <td>연방·주 교통경찰<br>FMCSA 검사관</td>
+          <td>즉시 운행정지 명령권<br>차량 압류 가능</td>
+          <td>연방 공무원 지위<br>수사권 보유</td>
+        </tr>
+        <tr>
+          <td><span class="country-badge badge-de">독일</span><br>BALM</td>
+          <td>연방화물청 직원</td>
+          <td>이동 금지 명령<br>즉시 과태료 부과</td>
+          <td>형법 §115 기능기준 보호<br><strong>신분 무관 직무 보호</strong></td>
+        </tr>
+        <tr>
+          <td><span class="country-badge badge-jp">일본</span><br>국토교통성</td>
+          <td>국토교통성 직원<br>도도부현 경찰</td>
+          <td>운행정지 명령<br>경찰관 지원 요청</td>
+          <td>사전 허가제 + 직접 단속권</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>특히 독일 BALM(연방화물청)의 사례는 가장 주목할 만하다. 독일 형법 제115조는 "경찰관과 동등한 수준의 직무를 수행하는 자"를 형법적으로 보호한다. 이는 <strong>신분(공무원 여부)이 아닌 기능(직무의 성격)을 기준</strong>으로 보호 여부를 결정하는 원칙으로, 운행제한단속원에 대한 공무집행방해죄 의제 조항 신설의 법리적 근거가 된다.</p>
+
+    <div class="section-header">
+      <span class="section-num">2-5</span>
+      <span class="section-title">논거 ⑤ — 형법적 보호 부재의 현장 위험성: 단속원은 무방비 상태</span>
+    </div>
+
+    <p>과적 단속 현장은 구조적으로 위험하다. 과적 화물차 운전자 또는 운송회사는 적발 시 수백만 원의 물류비 손실을 피하기 위해 강력히 저항할 경제적 동기를 가진다. 단속원이 운행중지를 요구할 때 운전자가 폭력적으로 저항하는 사례는 현장에서 반복된다. 그러나 이때 가해자에게 적용되는 법은 폭행죄(형법 §260, 2년 이하 징역·500만 원 이하 벌금)에 불과하며, 공무원에 대한 폭력 시 적용되는 공무집행방해죄(형법 §136, 5년 이하 징역·1,000만 원 이하 벌금)의 보호는 받지 못한다.</p>
+
+    <div class="box-warn">
+      <div class="box-warn-label">⚠ 형사 보호의 실질적 격차</div>
+      <p style="margin:0;font-size:9pt;color:#5a4030;line-height:1.8">공무집행방해죄(§136)와 폭행죄(§260)의 법정 최고형 차이는 단순한 숫자 이상의 의미를 갖는다. 공무집행방해죄는 국가 공권력의 위엄과 실행 가능성을 보호하는 것으로, 이 보호가 적용되지 않는다는 것은 단속원의 명령이 법적으로 더 가볍게 취급된다는 신호를 사회에 발신하는 것과 같다. 이는 현장 저항을 구조적으로 조장한다.</p>
+    </div>
+
+    <div class="footnote">
+      <span class="fn-marker">※</span> 이 장의 모든 수치는 감사원 「화물자동차 안전운행 관리실태」(2024.8.1), 국정감사 자료(2025.10, 안태준 의원), 특사경 검토 메모(2025.10.14), FMCSA·BALM·국토교통성 공식 자료에 근거한다.
+    </div>
+
+  </div>
+  <div class="page-footer">
+    <span class="footer-org">민주노총 공공운수노동조합 국토교통부새노조지부</span>
+    <span class="footer-page">— 5~6 —</span>
+  </div>
+</div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     CHAPTER 3 — 처우개선 논거
+════════════════════════════════════════════ -->
+<div class="page page-break">
+<div class="content-page">
+  <div class="page-header">
+    <span class="page-header-title">운행제한단속원 제도 개혁 및 처우개선 정책 제안서</span>
+    <span class="page-header-chapter">제3장 · 처우개선의 당위성</span>
+  </div>
+  <div class="content-body">
+
+    <div class="chapter-header">
+      <span class="chapter-num">Chapter 3</span>
+      <div class="chapter-title">처우개선의 당위성과 논거</div>
+      <div class="chapter-desc">동일한 업무를 수행하는 과적단속직 공무원 대비 4가지 수당 항목이 미지급되고 있는 구조적 차별의 법적·헌법적·실증적 부당성을 다섯 가지 논거로 제시한다.</div>
+    </div>
+
+    <div class="section-header">
+      <span class="section-num">3-1</span>
+      <span class="section-title">논거 ① — 동일 가치 노동에 대한 동등 처우: 헌법적 원칙</span>
+    </div>
+
+    <p>헌법 제11조 제1항은 모든 국민은 법 앞에 평등하며, 누구든지 성별·종교 또는 사회적 신분에 의하여 차별을 받지 아니한다고 규정한다. 고용형태(공무원 vs. 공무직)를 이유로 동일한 가치를 가진 노동에 현저히 다른 보수를 지급하는 것은 이 헌법적 평등 원칙에 반하는 차별이다.</p>
+
+    <p>근로기준법 제6조는 "사용자는 근로자에 대하여 … 사회적 신분을 이유로 근로조건에 대한 차별적 처우를 하지 못한다"고 규정하며, 기간제 및 단시간근로자 보호에 관한 법률은 "동종 또는 유사한 업무에 종사하는 통상 근로자에 비하여 차별적 처우를 하여서는 아니 된다"고 명시한다. 공무직 신분은 이 법적 보호의 사각지대에 놓여 있으나, 이는 제도의 결함이지 차별의 정당화 근거가 되지 않는다.</p>
+
+    <div class="box-info">
+      <p style="margin:0;font-size:9pt;line-height:1.85;color:#1a2a3a"><strong>ILO 제100호 협약(동일 가치 노동에 대한 동등 보수 원칙)</strong>은 한국이 비준한 국제 노동 기준으로, 고용형태를 이유로 동일한 가치의 노동에 다른 보수를 지급하는 것을 금지한다. 공무직 단속원의 처우 차별은 이 국제 기준에도 위배된다.</p>
+    </div>
+
+    <div class="section-header">
+      <span class="section-num">3-2</span>
+      <span class="section-title">논거 ② — 대법원이 인정한 업무 동일성: 처우 차별의 법적 모순</span>
+    </div>
+
+    <p>대법원 2016다255941(2023.9.21) 판결에서 다수의견은 처우 차별을 정당화했지만, 그 판결의 사실 인정 부분에서 과적단속원과 과적단속직 공무원의 업무가 "본질적으로 같은 종류 또는 유사한 업무"임을 명확히 인정하였다. 즉, 법원 스스로 업무의 동일성을 확인한 것이다.</p>
+
+    <div class="compare-grid">
+      <div class="compare-col">
+        <div class="compare-col-header bad">다수의견 (처우 차별 정당화)</div>
+        <div class="compare-col-body">
+          "공무직은 공무원에 대한 관계에서 '사회적 신분'에 해당하지 않고, 공무원을 비교집단으로 삼을 수 없다. 따라서 정근수당·직급보조비·성과상여금·가족수당을 받지 못하더라도 차별적 처우로 볼 수 없다."
+        </div>
+      </div>
+      <div class="compare-col">
+        <div class="compare-col-header good">반대의견 5인 — 차별 인정</div>
+        <div class="compare-col-body">
+          "공무직은 사회적 신분에 해당하며, 공무원을 비교대상으로 삼을 수 있다. 과적단속원은 과적단속직 공무원과 본질적으로 같은 종류의 업무 또는 유사한 업무를 수행한다. <strong>가족수당·성과상여금 미지급은 합리적 이유 없는 차별이다.</strong>"
+        </div>
+      </div>
+    </div>
+
+    <p>반대의견이 소수라는 사실이 그 논리의 정당성을 훼손하지는 않는다. 전원합의체 13인 중 5인이 차별을 인정한 이 판결은, 입법을 통해 시정되지 않는 한 동일한 부당함이 지속될 것임을 예고하는 것이다. 처우 차별의 해소는 사법적 결정 이전에 입법적 결단으로 이루어져야 한다.</p>
+
+    <div class="section-header">
+      <span class="section-num">3-3</span>
+      <span class="section-title">논거 ③ — 직무의 위험성과 특수성에 상응하는 보상이 필요</span>
+    </div>
+
+    <p>운행제한단속원의 직무는 그 자체로 위험하다. 고속도로·일반국도 상에서 운행 중인 대형 화물차를 대상으로 계중·서류 확인·후속 조치를 집행하는 과정에서, 단속원은 차량 사고, 운전자 폭력, 기상 악화, 야간 근무 등 복합적 위험에 상시 노출된다.</p>
+
+    <ul class="arg-list">
+      <li>야간·새벽 단속 근무 중 피로·위험에 노출되며, 야간근로수당은 감시·단속적 근로자에게도 근로기준법 제56조에 따라 지급 의무가 있다는 것이 법제처 해석 및 법원의 확립된 법리이다. 현장 야간 근무의 실태가 이를 통해 제도적으로 뒷받침된다.</li>
+      <li>과적 차량 운전자의 저항·폭력에 무방비로 노출되는 직무 위험성은 위험수당의 법제화 근거가 된다.</li>
+      <li>도로법은 단속원에게 공무원 수준의 법적 책임(뇌물죄 의제)을 부과하면서도, 이에 상응하는 보상 체계를 갖추지 않고 있다. 책임과 보상의 균형 원칙에 반한다.</li>
+      <li>숙련 단속원의 이탈은 단속 역량 약화로 직결된다. 처우 개선은 인력 안정화와 단속 품질 제고를 위한 투자이다.</li>
+    </ul>
+
+    <div class="section-header">
+      <span class="section-num">3-4</span>
+      <span class="section-title">논거 ④ — 처우 차별이 단속 실효성을 약화시키는 악순환</span>
+    </div>
+
+    <p>처우 문제는 단순히 개인의 소득 수준 문제가 아니다. 열악한 처우는 숙련 인력의 이탈을 유발하고, 이는 단속 역량의 약화로 이어지며, 결국 과적 차량의 사실상 방치라는 공익 피해로 귀결된다. 이는 연쇄적 악순환이다.</p>
+
+    <div class="box-key">
+      <div class="box-key-label">처우 차별 → 단속 실효성 약화의 연쇄 구조</div>
+      <div class="box-key-text">
+        <strong style="color:#ff8a80">① 처우 차별 지속</strong> → <strong style="color:#ffcc80">② 숙련 단속원 이탈·신규 지원 감소</strong> → <strong style="color:#ff8a80">③ 단속 인력 부족·역량 약화</strong> → <strong style="color:#ffcc80">④ 과적 적발률 저하·집행력 약화</strong> → <strong style="color:#ff8a80">⑤ 도로·교량 파손 증가·재정 손실 확대</strong> → <strong style="color:#ffcc80">⑥ 유지보수 예산 증가 → 단속 예산 상대적 축소</strong> → ① 반복
+      </div>
+    </div>
+
+    <p>반대로, 처우를 개선하면 이 악순환은 선순환으로 전환된다. 숙련 인력이 유지되고 신규 인력이 유입될 때, 단속 역량이 강화되고 과적 억제력이 높아져 도로 손상이 줄어들며 국가 재정이 절감된다. 처우 개선은 비용이 아니라 투자이다.</p>
+
+    <div class="section-header">
+      <span class="section-num">3-5</span>
+      <span class="section-title">논거 ⑤ — 입법 공백 해소의 시급성: 의안번호 8464</span>
+    </div>
+
+    <p>문진석 의원 등 10인(2025.2.26)이 발의한 도로법 일부개정법률안(의안번호 8464)은 도로법 제77조에 제8항을 신설하여 "운행제한단속원의 보수는 재직기간과 유사한 업무에 종사하는 공무원의 보수를 고려하여 대통령령으로 정한다"는 조항을 두는 것을 핵심으로 한다.</p>
+
+    <div class="box-law">
+      <div class="box-law-label">📋 도로법 일부개정법률안 — 개정 조문 (의안번호 8464)</div>
+      <code>
+        도로법 제77조에 제8항을 다음과 같이 신설한다.<br><br>
+        ⑧ 운행제한단속원의 보수는 재직기간과 유사한 업무에 종사하는<br>
+        공무원의 보수를 고려하여 대통령령으로 정한다.<br><br>
+        부칙: 이 법은 공포 후 6개월이 경과한 날부터 시행한다.<br>
+        발의자: 문진석·박정현·윤종군·복기왕·이정문·이재관·<br>
+        윤호중·장종태·박성준·김문수 의원 (10인)
+      </code>
+    </div>
+
+    <p>이 조항이 신설되면 대통령령으로 구체적 보수 기준을 마련하는 법적 위임 체계가 형성되어, 지금처럼 국토교통부 내부 지침에 의존하는 불안정한 보수 구조가 법률·시행령 체계로 전환된다. 기관별 편차를 원천 차단하고, 전국 단속원에게 동일한 보수 기준을 적용하는 근거가 마련된다. 이 법안의 조속한 심의·의결은 입법 공백 해소를 위한 최소한의 조치이다.</p>
+
+    <div class="footnote">
+      <span class="fn-marker">※</span> 출처: 대법원 2016다255941(2023.9.21), 도로법 일부개정법률안(의안번호 8464, 2025.2.26), 국토교통부 공무직 근로계약 및 보수 관련 행정자료, ILO 제100호 협약.
+    </div>
+
+  </div>
+  <div class="page-footer">
+    <span class="footer-org">민주노총 공공운수노동조합 국토교통부새노조지부</span>
+    <span class="footer-page">— 7~9 —</span>
+  </div>
+</div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     CHAPTER 4 — POLICY PROPOSALS
+════════════════════════════════════════════ -->
+<div class="page page-break">
+<div class="content-page">
+  <div class="page-header">
+    <span class="page-header-title">운행제한단속원 제도 개혁 및 처우개선 정책 제안서</span>
+    <span class="page-header-chapter">제4장 · 5대 통합 정책 제언</span>
+  </div>
+  <div class="content-body">
+
+    <div class="chapter-header">
+      <span class="chapter-num">Chapter 4</span>
+      <div class="chapter-title">5대 통합 정책 제언</div>
+      <div class="chapter-desc">앞서 제시한 논거에 기초하여, 구체적이고 실행 가능한 5대 정책 제언을 법령 개정 필요 조항과 함께 제시한다. 각 제언은 단기 착수(1~2년)가 가능하며, 상호 보완적으로 설계되었다.</div>
+    </div>
+
+    <!-- Proposal 1 -->
+    <div class="proposal-card">
+      <div class="proposal-card-header">
+        <span class="proposal-num">제언 01</span>
+        <span class="proposal-title">분리운송 시설 의무화 및 국가 예산 확보 — 도로법 시행령 개정</span>
+      </div>
+      <div class="proposal-body">
+        <div class="proposal-section">
+          <div class="proposal-section-label">현황 문제</div>
+          <div class="proposal-section-body">전국 고속도로 단속검문소 384곳 중 분리운송 시설 보유 1곳(0.26%). 81.8%(314곳)는 영구 설치 불가. 감사원 통보(2024.8) 후 1년 이상 관련 규정 개정 미이행. 법령상 의무인 분리운송을 실행할 물리적 기반이 사실상 전무한 상태.</div>
+        </div>
+        <div class="proposal-section">
+          <div class="proposal-section-label">세부 제언</div>
+          <div class="proposal-section-body">
+            <ul class="num-list">
+              <li>도로법 시행령 개정: 단속검문소 설치·운영 기준에 분리운송 공간·시설을 필수 요소로 명시</li>
+              <li>단계별 이행 의무: 전국 773개 검문소 중 설치 가능 280곳(36.2%) 대상 2년 내 완료, 불가 검문소 대체 시설 지정 3년 내 완료</li>
+              <li>국가 예산 우선 배정: 분리운송 시설 설치 비용을 국토부 도로 유지 예산에 별도 항목 신설</li>
+              <li>인근 휴게소·IC 부지·공공 용지를 임시 야적 공간으로 지정·활용하는 법적 근거 마련</li>
+              <li>분리운송 비용 구상권: 도로관리청이 선지출 후 화주·운전자에게 구상하는 제도 도입</li>
+            </ul>
+          </div>
+        </div>
+        <div class="proposal-section">
+          <div class="proposal-section-label">기대 효과 및 예산</div>
+          <div class="proposal-section-body">거점 당 5~10억 원, 100개 거점 기준 500~1,000억 원 소요. 연간 760억 원 도로 보수비 절감을 고려하면 <strong>2년 내 투자 회수 가능</strong>. 집행률 0.4%의 근본 원인 해소.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proposal 2 -->
+    <div class="proposal-card">
+      <div class="proposal-card-header">
+        <span class="proposal-num">제언 02</span>
+        <span class="proposal-title">운행중지·분리운송 집행 SOP 법제화 — 훈령에서 법령·시행령으로 상향</span>
+      </div>
+      <div class="proposal-body">
+        <div class="proposal-section">
+          <div class="proposal-section-label">현황 문제</div>
+          <div class="proposal-section-body">후속 조치 집행 절차가 국토교통부훈령(제1214호) 수준에만 규정되어 법적 구속력이 낮고 현장 임의 해석이 가능하다. 2026.3 훈령 개정은 긍정적이나, 강제 집행 수단 부재·시설 미비·수사권 공백이라는 근본 문제를 해결하지 못한다.</div>
+        </div>
+        <div class="proposal-section">
+          <div class="proposal-section-label">세부 제언</div>
+          <div class="proposal-section-body">
+            <ul class="num-list">
+              <li>도로법 개정: 후속조치의 원칙적 조치를 '분리운송 또는 운행중지'로 명시, 회차는 예외로 한정</li>
+              <li>시행령 개정: 후속조치 발동 요건·절차·이행 확인 방법을 대통령령으로 법정화</li>
+              <li>이행 확인 의무 강화: 도로관리청의 현장 직접 확인 의무화 (훈령 §25②를 법령으로 상향)</li>
+              <li>미이행 고발 의무화: 불응 시 고발 의무를 법령에 명시 (재량 → 의무)</li>
+              <li>화주 연대 책임 강화: 적재 지시 단계부터 화주에게도 과태료 부과 가능한 규정 법령화</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="page-footer">
+    <span class="footer-org">민주노총 공공운수노동조합 국토교통부새노조지부</span>
+    <span class="footer-page">— 10~11 —</span>
+  </div>
+</div>
+</div>
+
+<div class="page page-break">
+<div class="content-page">
+  <div class="page-header">
+    <span class="page-header-title">운행제한단속원 제도 개혁 및 처우개선 정책 제안서</span>
+    <span class="page-header-chapter">제4장 · 5대 통합 정책 제언 (계속)</span>
+  </div>
+  <div class="content-body">
+
+    <!-- Proposal 3 -->
+    <div class="proposal-card">
+      <div class="proposal-card-header">
+        <span class="proposal-num">제언 03</span>
+        <span class="proposal-title">운행제한단속원 특별사법경찰권 부여 — 사법경찰직무법 개정</span>
+      </div>
+      <div class="proposal-body">
+        <div class="proposal-section">
+          <div class="proposal-section-label">현황 문제 및 법리 검토</div>
+          <div class="proposal-section-body">사법경찰직무법은 공무원을 전제로 특사경 자격을 규정하여, 공무직 신분의 단속원에 대한 즉시 부여 통로가 현행법상 없다. 별도 입법이 불가피하다. 방안 A(공무원 전담 조직 신설)와 방안 B(공무직 포함 특례 입법) 두 경로가 있다.</div>
+        </div>
+        <div class="proposal-section">
+          <div class="proposal-section-label">세부 제언 — 입법 방향 및 초안</div>
+          <div class="proposal-section-body">
+            <div class="box-law" style="margin:0 0 10px 0">
+              <div class="box-law-label">📋 입법 초안 — 도로교통특별사법경찰 근거 조항</div>
+              <code>
+                ① 도로법 제○○조에 따른 운행제한 위반 사건의 수사에 관하여<br>
+                &nbsp;&nbsp; 국토교통부장관 소속 '도로교통특별사법경찰'을 둔다.<br>
+                ② 구성·자격·복무·교육 및 직무범위는 대통령령으로 정한다.<br>
+                ③ 검사장은 제2항에 따른 자를 특별사법경찰관리로 지명한다.
+              </code>
+            </div>
+            <ul class="num-list">
+              <li><strong>방안 A (권고안)</strong>: 공무원 전담 조직 신설, 사법경찰직무법에 직무범위 명시, 관할 검사장 지명 절차 수립, 현 단속원 공무원 전환 병행 검토</li>
+              <li><strong>방안 B (선택안)</strong>: 공무직 포함 특례 입법, 국립공원공단 모델 벤치마킹, 직무 범위를 도로법 §77 위반 사건으로 명확 획정, 인권보호 장치 의무화</li>
+              <li>어느 방안이든 특사경 자격 취득 교육 과정 신설 및 검찰청과의 연계 훈련 프로그램 구축을 병행한다.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="proposal-section">
+          <div class="proposal-section-label">기대 효과</div>
+          <div class="proposal-section-body">명령 불응 시 현장 즉시 형사소추 가능. 사후 고발에 의존하던 사실상 무패널티 구조 해소. 현장 저항 억제 효과로 단속 실효성 근본 강화.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proposal 4 -->
+    <div class="proposal-card">
+      <div class="proposal-card-header">
+        <span class="proposal-num">제언 04</span>
+        <span class="proposal-title">공무집행방해죄 의제 조항 신설 — 도로법 개정으로 형법적 보호 확보</span>
+      </div>
+      <div class="proposal-body">
+        <div class="proposal-section">
+          <div class="proposal-section-label">현황 문제</div>
+          <div class="proposal-section-body">대법원 확립 판례에 따라 공무집행방해죄(형법 §136) 보호 대상에서 제외. 단속 중 폭력 피해 시 폭행죄(§260)만 적용 — 법정 최고형이 절반 수준. 현장 저항을 구조적으로 조장하는 법적 공백.</div>
+        </div>
+        <div class="proposal-section">
+          <div class="proposal-section-label">세부 제언</div>
+          <div class="proposal-section-body">
+            <div class="box-law" style="margin:0 0 10px 0">
+              <div class="box-law-label">📋 도로법 개정 — 의제 조항 신설안</div>
+              <code>
+                도로법 제109조 또는 별도 조항:<br>
+                "운행제한단속원이 제77조 제4항 및 시행규칙 제40조의2에<br>
+                &nbsp;따른 직무를 수행하는 경우 형법 제136조(공무집행방해)의<br>
+                &nbsp;적용에 있어 공무원으로 본다."
+              </code>
+            </div>
+            <ul class="num-list">
+              <li>독일 BALM 모델 채택: 신분이 아닌 기능(직무 성격) 기준 형법 보호 원칙</li>
+              <li>청원경찰 선례 활용: 청원경찰법상 공무집행방해죄 인정 체계 유추 적용</li>
+              <li>단속 방해 행위의 처벌 수준을 현행 폭행죄 이상으로 명확화</li>
+            </ul>
+          </div>
+        </div>
+        <div class="proposal-section">
+          <div class="proposal-section-label">기대 효과</div>
+          <div class="proposal-section-body">현장 단속 저항 및 폭력에 대한 억제 효과. 단속원의 심리적 안정과 업무 자신감 제고. 숙련 인력 이탈 방지 및 직무 환경 개선.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proposal 5 -->
+    <div class="proposal-card">
+      <div class="proposal-card-header">
+        <span class="proposal-num">제언 05</span>
+        <span class="proposal-title">처우 개선 법제화 — 도로법 제77조 제8항 신설 (의안번호 8464 조속 처리)</span>
+      </div>
+      <div class="proposal-body">
+        <div class="proposal-section">
+          <div class="proposal-section-label">현황 문제</div>
+          <div class="proposal-section-body">정근수당·직급보조비·성과상여금·가족수당 4개 항목 미지급 지속. 국토교통부 내부 지침만으로 보수 현실화 법적 구속력 없음. 기관별(지방청별) 보수 편차 존재. 의안번호 8464 법안이 발의되어 있으나 심의 지연.</div>
+        </div>
+        <div class="proposal-section">
+          <div class="proposal-section-label">세부 제언</div>
+          <div class="proposal-section-body">
+            <ul class="num-list">
+              <li><strong>의안번호 8464 조속 심의·의결</strong>: 문진석 의원 등 10인 발의 개정안을 국토교통위원회에서 우선 심의하여 법정 보수 기준 근거 마련</li>
+              <li>대통령령 보수 기준 구체화: 법 개정 후 시행령에서 재직 연수별 호봉 체계, 위험수당·야간수당 지급 기준을 과적단속직 공무원 수준으로 규정</li>
+              <li>위험수당 법제화: 과적 차량 단속 시 구조적 신체 위험 노출이 발생하는 직무 특성을 시행령에 반영하여 별도 항목으로 의무화</li>
+              <li>전국 단속원 보수 편차 해소: 소속 기관 무관하게 동일 업무 동일 보수 원칙 실현</li>
+            </ul>
+          </div>
+        </div>
+        <div class="proposal-section">
+          <div class="proposal-section-label">기대 효과</div>
+          <div class="proposal-section-body">불안정한 내부 지침 기반에서 법률·시행령 체계로 전환. 숙련 인력 이탈 방지·신규 유입 촉진. 동일 가치 노동 동등 처우 헌법 원칙 실현. 단속 품질 제고를 통한 공익 확보.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="page-footer">
+    <span class="footer-org">민주노총 공공운수노동조합 국토교통부새노조지부</span>
+    <span class="footer-page">— 12~14 —</span>
+  </div>
+</div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     ROADMAP & CONCLUSION
+════════════════════════════════════════════ -->
+<div class="page page-break">
+<div class="content-page">
+  <div class="page-header">
+    <span class="page-header-title">운행제한단속원 제도 개혁 및 처우개선 정책 제안서</span>
+    <span class="page-header-chapter">이행 로드맵 및 결론</span>
+  </div>
+  <div class="content-body">
+
+    <div class="chapter-header">
+      <span class="chapter-num">Implementation Roadmap</span>
+      <div class="chapter-title">단계별 이행 로드맵</div>
+    </div>
+
+    <div class="roadmap">
+      <div class="roadmap-phase">
+        <div class="roadmap-phase-header">
+          단기 조치
+          <span class="roadmap-phase-period">0 ~ 6개월</span>
+        </div>
+        <div class="roadmap-phase-body">
+          <div class="roadmap-item">의안번호 8464 국토교통위 심의·의결 촉구</div>
+          <div class="roadmap-item">전국 단속검문소 분리운송 시설 실태조사 및 예산 신청</div>
+          <div class="roadmap-item">사법경찰직무법 개정 법안 초안 작성 및 발의</div>
+          <div class="roadmap-item">도로법 공무집행방해 의제 조항 신설안 발의</div>
+          <div class="roadmap-item">후속조치 집행 SOP 법령 상향 법안 초안 작성</div>
+          <div class="roadmap-item">감사원 지적 사항 이행 여부 국감 점검 실시</div>
+        </div>
+      </div>
+      <div class="roadmap-phase">
+        <div class="roadmap-phase-header">
+          중기 조치
+          <span class="roadmap-phase-period">6 ~ 18개월</span>
+        </div>
+        <div class="roadmap-phase-body">
+          <div class="roadmap-item">도로법 시행령 개정 — 분리운송 시설 필수 요소 명시</div>
+          <div class="roadmap-item">전국 773개 검문소 중 설치 가능 280곳 착공 및 대체 시설 지정</div>
+          <div class="roadmap-item">사법경찰직무법 개정 국회 통과</div>
+          <div class="roadmap-item">도로교통특별사법경찰 조직 설계 및 인력 배치</div>
+          <div class="roadmap-item">도로법 공무집행방해 의제 조항 시행</div>
+          <div class="roadmap-item">대통령령 보수 기준 구체화 (위험수당 명문화)</div>
+        </div>
+      </div>
+      <div class="roadmap-phase">
+        <div class="roadmap-phase-header">
+          장기 조치
+          <span class="roadmap-phase-period">18 ~ 36개월</span>
+        </div>
+        <div class="roadmap-phase-body">
+          <div class="roadmap-item">도로교통특별사법경찰 2~3개 지방청 시범 운영</div>
+          <div class="roadmap-item">성과 평가 후 전국 확대 시행</div>
+          <div class="roadmap-item">분리운송 시설 전국 설치 완료</div>
+          <div class="roadmap-item">전국 단속원 보수 편차 해소 확인</div>
+          <div class="roadmap-item">후속조치 집행률 연간 국감 정례 점검 제도화</div>
+          <div class="roadmap-item">제도 효과 평가 및 추가 개선 사항 도출</div>
+        </div>
+      </div>
+    </div>
+
+    <table style="margin-top:16px">
+      <thead>
+        <tr><th>제언</th><th>조치 유형</th><th>단기</th><th>중기</th><th>장기</th><th>소관</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>제언 1: 분리운송 시설</td><td>예산·행정</td><td>실태조사</td><td>착공</td><td>전국 완료</td><td>국토교통부</td></tr>
+        <tr><td>제언 2: SOP 법제화</td><td>입법</td><td>초안 작성</td><td>국회 통과</td><td>시행·평가</td><td>국회·국토부</td></tr>
+        <tr><td>제언 3: 특사경 부여</td><td>입법·조직</td><td>법안 발의</td><td>법 개정·조직</td><td>전국 확대</td><td>국회·법무부·국토부</td></tr>
+        <tr><td>제언 4: 공무원 의제</td><td>입법</td><td>법안 발의</td><td>도로법 개정</td><td>시행</td><td>국회·국토부</td></tr>
+        <tr><td>제언 5: 처우 개선</td><td>입법</td><td>8464 의결</td><td>시행령 기준화</td><td>전국 적용</td><td>국회 국토교통위</td></tr>
+      </tbody>
+    </table>
+
+    <div class="chapter-header" style="margin-top:32px">
+      <span class="chapter-num">Conclusion</span>
+      <div class="chapter-title">결론 및 국회에 대한 촉구</div>
+    </div>
+
+    <div class="conclusion-box">
+      <div class="conclusion-title">운행제한단속원은 국가 도로 안전의 최일선에서<br>민간인 수준의 보호 아래 공무원 수준의 책임을 지고 있다</div>
+      <p>
+        과적 차량이 교량을 달릴 때, 그것을 막아야 하는 마지막 법적 방어선은 운행제한단속원이다. 그러나 그들에게는 차량을 세울 강제 수단도, 저항하는 운전자로부터 자신을 보호할 법적 방패도 주어져 있지 않다. 단속하고, 명령하고, 기록하지만, 차량은 그대로 달려간다. 이것이 현재 대한민국 과적 단속의 현실이다.
+      </p>
+      <p>
+        2021~2023년 단속 91,990건 중 99.6%가 과적 상태로 그대로 통과되었다. 고속도로에서는 5년간 분리운송 실집행이 단 한 건도 없었다. 1조 6,000억 원의 과태료가 미부과되었다. 이 수치들은 행정 실패의 기록이 아니라, 제도 설계의 실패를 보여주는 증거이다.
+      </p>
+      <p>
+        특별사법경찰권 부여는 단속원에게 권력을 주는 것이 아니다. 법이 규정한 의무를 현실에서 이행할 수 있도록, 법과 현실 사이의 공백을 메우는 최소한의 입법적 응답이다. 처우 개선은 개인의 이익이 아니다. 숙련 인력을 유지하고 단속 역량을 보존함으로써 공익을 수호하는 제도적 투자이다.
+      </p>
+      <p>
+        국회 국토교통위원회는 본 제안서가 제시한 다음 사항을 즉각 이행하기 바란다.
+      </p>
+    </div>
+
+    <ul class="arg-list" style="margin-top:16px">
+      <li><strong>도로법 및 사법경찰직무법 개정 법안을 즉시 발의</strong>하여 특별사법경찰권 부여와 형법적 보호 강화를 추진하라.</li>
+      <li><strong>의안번호 8464(문진석 의원 대표발의)</strong>를 국토교통위원회에서 우선 심의·의결하여 처우 개선의 법적 근거를 마련하라.</li>
+      <li><strong>분리운송 시설 설치를 위한 국가 예산</strong>을 차기 예산안에 반드시 포함하고, 3년 내 설치 완료 의무화를 위한 시행령 개정을 촉구하라.</li>
+      <li><strong>후속조치 집행률 및 분리운송 시설 현황</strong>을 매년 국정감사 점검 항목으로 법정화하여 행정 책임성을 확보하라.</li>
+      <li><strong>감사원이 2024년 8월 지적한 사항에 대한 국토교통부의 시정 조치 이행 여부</strong>를 즉시 점검하고 미이행 시 시정을 명하라.</li>
+    </ul>
+
+    <div class="box-warn" style="margin-top:20px">
+      <div class="box-warn-label">📌 입법 불이행의 책임</div>
+      <p style="margin:0;font-size:9pt;color:#5a4030;line-height:1.85">단속원이 명령을 내리지 못해서가 아니라, <strong>명령을 내려도 집행할 수 없는 구조</strong> 때문에 과적 차량이 도로 위를 달린다. 1994년 성수대교 붕괴에서 과적이 원인 중 하나로 지목된 지 30년이 지났다. 그 교훈이 아직도 제도에 반영되지 않았다면, 다음 사고의 책임은 이를 알고도 방치한 현재의 국회와 행정부가 함께 져야 한다.</p>
+    </div>
+
+    <div class="footnote" style="margin-top:24px">
+      <span class="fn-marker">※ 주요 근거 자료</span>: 감사원 「화물자동차 안전운행 관리실태」 감사보고서(2024.8.1) / 국회 국토교통위원회 2025 국정감사 안태준 의원 자료(2025.10) / 대법원 2016다255941(2023.9.21) / 도로법 제20758호(2025.8.1 시행) / 도로법 일부개정법률안(의안번호 8464, 2025.2.26) / 사법경찰직무법 / 특사경 검토 메모(2025.10.14) / FMCSA·BALM·국토교통성 공식 자료 / 독일 형법(StGB) §115 / AASHO Road Test(1956~1961)
+    </div>
+
+  </div>
+  <div class="page-footer">
+    <span class="footer-org">민주노총 공공운수노동조합 국토교통부새노조지부</span>
+    <span class="footer-page">— 15~17 —</span>
+  </div>
+</div>
+</div>
+
+</body>
+</html>

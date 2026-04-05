@@ -1,0 +1,1940 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>방치된 위협 — 운행제한(과적) 차량 불법 운행의 실태와 단속 강화의 긴급한 필요성에 관한 정책보고서</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  /* ===== 기본 설정 ===== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans KR', '나눔고딕', sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.8;
+    color: #1a1a1a;
+    background: #f5f5f5;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ===== 페이지 컨테이너 ===== */
+  .page {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.12);
+  }
+
+  /* ===== 커버페이지 ===== */
+  .cover {
+    background: #1a2744;
+    color: #fff;
+    padding: 80px 60px 60px;
+    min-height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #c0392b, #e74c3c, #c0392b);
+  }
+
+  .cover::after {
+    content: '';
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 300px; height: 300px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 50%;
+    transform: translate(30%, 30%);
+  }
+
+  .cover-badge {
+    display: inline-block;
+    background: rgba(192,57,43,0.9);
+    color: #fff;
+    font-size: 9pt;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    padding: 6px 18px;
+    border-radius: 2px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+  }
+
+  .cover-title-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .cover-pretitle {
+    font-size: 12pt;
+    font-weight: 300;
+    color: rgba(255,255,255,0.65);
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .cover-main-title {
+    font-size: 32pt;
+    font-weight: 900;
+    line-height: 1.2;
+    color: #fff;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+  }
+
+  .cover-main-title .em {
+    color: #e74c3c;
+  }
+
+  .cover-sub-title {
+    font-size: 13pt;
+    font-weight: 400;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.7;
+    margin-top: 24px;
+    border-left: 3px solid #e74c3c;
+    padding-left: 18px;
+  }
+
+  .cover-warning {
+    background: rgba(231,76,60,0.15);
+    border: 1px solid rgba(231,76,60,0.5);
+    border-radius: 4px;
+    padding: 18px 24px;
+    margin-top: 40px;
+    font-size: 9.5pt;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.7;
+  }
+
+  .cover-warning strong {
+    color: #e74c3c;
+    font-size: 10.5pt;
+  }
+
+  .cover-footer {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 28px;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    font-size: 9pt;
+    color: rgba(255,255,255,0.65);
+  }
+
+  .cover-footer-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cover-footer-label {
+    font-size: 7.5pt;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 6px;
+  }
+
+  .cover-footer-value {
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: rgba(255,255,255,0.9);
+  }
+
+  /* ===== 본문 영역 ===== */
+  .body-content {
+    padding: 50px 60px;
+  }
+
+  /* ===== Executive Summary ===== */
+  .exec-summary {
+    background: #1a2744;
+    color: #fff;
+    padding: 40px 50px;
+    margin: 0 0 40px 0;
+    page-break-after: always;
+  }
+
+  .exec-summary-title {
+    font-size: 16pt;
+    font-weight: 900;
+    color: #fff;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 14px;
+    margin-bottom: 30px;
+    letter-spacing: 0.05em;
+  }
+
+  .exec-summary-title span {
+    color: #e74c3c;
+  }
+
+  .exec-warning-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+
+  .exec-warning-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-left: 4px solid #e74c3c;
+    padding: 16px 20px;
+    border-radius: 3px;
+  }
+
+  .exec-warning-card .stat-number {
+    font-size: 22pt;
+    font-weight: 900;
+    color: #e74c3c;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .exec-warning-card .stat-label {
+    font-size: 8.5pt;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.5;
+  }
+
+  .exec-section-title {
+    font-size: 10pt;
+    font-weight: 700;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin: 24px 0 12px;
+  }
+
+  .exec-defect-list {
+    list-style: none;
+    margin: 0 0 24px;
+  }
+
+  .exec-defect-list li {
+    padding: 8px 0 8px 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 9.5pt;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.6;
+    position: relative;
+  }
+
+  .exec-defect-list li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: #e74c3c;
+    font-size: 8pt;
+    top: 10px;
+  }
+
+  .exec-policy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .exec-policy-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 14px 18px;
+    border-radius: 3px;
+  }
+
+  .exec-policy-card .policy-num {
+    font-size: 8pt;
+    font-weight: 700;
+    color: #e74c3c;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+  }
+
+  .exec-policy-card .policy-text {
+    font-size: 9pt;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.55;
+  }
+
+  /* ===== 장(章) 제목 ===== */
+  .chapter {
+    margin-bottom: 40px;
+    page-break-before: always;
+  }
+
+  .chapter:first-of-type {
+    page-break-before: avoid;
+  }
+
+  .chapter-header {
+    background: #f0f0f0;
+    border-left: 6px solid #c0392b;
+    padding: 16px 24px;
+    margin-bottom: 28px;
+    border-radius: 0 3px 3px 0;
+  }
+
+  .chapter-num {
+    font-size: 8pt;
+    font-weight: 700;
+    color: #c0392b;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  .chapter-title {
+    font-size: 16pt;
+    font-weight: 900;
+    color: #1a2744;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+
+  /* ===== 절(節) 제목 ===== */
+  .section {
+    margin-bottom: 32px;
+  }
+
+  .section-title {
+    font-size: 12pt;
+    font-weight: 700;
+    color: #1a2744;
+    margin-bottom: 14px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #e8e8e8;
+  }
+
+  .section-title::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 14px;
+    background: #c0392b;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  /* ===== 본문 텍스트 ===== */
+  p {
+    margin-bottom: 12px;
+    text-align: justify;
+    word-break: keep-all;
+  }
+
+  /* ===== 표 ===== */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0 28px;
+    font-size: 9.5pt;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }
+
+  table caption {
+    font-size: 9pt;
+    font-weight: 700;
+    color: #444;
+    text-align: left;
+    margin-bottom: 8px;
+    padding-left: 2px;
+  }
+
+  th {
+    background: #1a2744;
+    color: #fff;
+    padding: 11px 14px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 9pt;
+    letter-spacing: 0.03em;
+    border: 1px solid #0f1d3a;
+  }
+
+  td {
+    padding: 9px 14px;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+    line-height: 1.55;
+  }
+
+  tr:nth-child(even) td {
+    background: #f5f7fa;
+  }
+
+  tr:nth-child(odd) td {
+    background: #fff;
+  }
+
+  .td-center { text-align: center; }
+  .td-right { text-align: right; }
+  .td-highlight { background: #fef3cd !important; font-weight: 700; color: #8b0000; }
+  .td-danger { background: #fde8e8 !important; font-weight: 700; color: #c0392b; }
+  .td-warning { background: #fff3e0 !important; font-weight: 700; color: #e65100; }
+  .td-bold { font-weight: 700; }
+
+  /* ===== 사고 사례 박스 ===== */
+  .accident-box {
+    background: #fff3cd;
+    border: 2px solid #ffc107;
+    border-radius: 5px;
+    padding: 22px 28px;
+    margin: 20px 0;
+  }
+
+  .accident-box-title {
+    font-size: 11pt;
+    font-weight: 900;
+    color: #c0392b;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ffc107;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .accident-box-title .icon {
+    font-size: 14pt;
+  }
+
+  .accident-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(255,193,7,0.4);
+    font-size: 9.5pt;
+    line-height: 1.65;
+  }
+
+  .accident-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .accident-badge {
+    background: #c0392b;
+    color: #fff;
+    font-size: 7.5pt;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 2px;
+    white-space: nowrap;
+    height: fit-content;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
+  .accident-text { color: #3a2000; }
+
+  /* ===== 정책 시사점 박스 ===== */
+  .insight-box {
+    background: #e8f4f8;
+    border-left: 5px solid #2980b9;
+    padding: 18px 24px;
+    margin: 20px 0;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .insight-box-title {
+    font-size: 10pt;
+    font-weight: 700;
+    color: #1a5276;
+    margin-bottom: 10px;
+  }
+
+  .insight-box p {
+    font-size: 9.5pt;
+    color: #1f4e79;
+    margin-bottom: 8px;
+  }
+
+  .insight-box p:last-child { margin-bottom: 0; }
+
+  /* ===== 경고 강조 박스 ===== */
+  .alert-box {
+    background: #fde8e8;
+    border: 2px solid #c0392b;
+    border-radius: 4px;
+    padding: 18px 24px;
+    margin: 20px 0;
+  }
+
+  .alert-box-title {
+    font-size: 10.5pt;
+    font-weight: 900;
+    color: #8b0000;
+    margin-bottom: 10px;
+  }
+
+  .alert-box p {
+    font-size: 9.5pt;
+    color: #5a0000;
+    margin-bottom: 6px;
+  }
+
+  /* ===== 감사원 발표 박스 ===== */
+  .audit-box {
+    background: #f8f0ff;
+    border: 2px solid #7b2fbe;
+    border-radius: 4px;
+    padding: 20px 28px;
+    margin: 20px 0;
+  }
+
+  .audit-box-title {
+    font-size: 11pt;
+    font-weight: 900;
+    color: #4a0080;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #c39de5;
+  }
+
+  .audit-stat {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  .audit-stat .big-num {
+    font-size: 28pt;
+    font-weight: 900;
+    color: #7b2fbe;
+    line-height: 1;
+  }
+
+  .audit-stat .big-label {
+    font-size: 9.5pt;
+    color: #3a0060;
+    line-height: 1.5;
+  }
+
+  /* ===== 정책 제언 박스 ===== */
+  .policy-box {
+    background: #f0f7ff;
+    border: 1px solid #b8d4f0;
+    border-top: 4px solid #1a6fba;
+    border-radius: 0 0 5px 5px;
+    padding: 24px 28px;
+    margin: 24px 0;
+  }
+
+  .policy-box-title {
+    font-size: 12pt;
+    font-weight: 900;
+    color: #0d3a70;
+    margin-bottom: 16px;
+  }
+
+  .policy-box-subtitle {
+    font-size: 9pt;
+    font-weight: 700;
+    color: #2980b9;
+    letter-spacing: 0.08em;
+    margin: 14px 0 8px;
+    text-transform: uppercase;
+  }
+
+  .policy-box p {
+    font-size: 9.5pt;
+    color: #1a3a5c;
+    margin-bottom: 8px;
+  }
+
+  /* ===== 각주 ===== */
+  .footnotes {
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    padding-top: 14px;
+  }
+
+  .footnotes p {
+    font-size: 8pt;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 4px;
+    text-align: left;
+  }
+
+  sup.fn {
+    font-size: 7pt;
+    color: #c0392b;
+    font-weight: 700;
+    vertical-align: super;
+  }
+
+  /* ===== 인용 박스 ===== */
+  blockquote {
+    border-left: 4px solid #c0392b;
+    background: #fafafa;
+    padding: 14px 20px;
+    margin: 16px 0;
+    font-style: italic;
+    font-size: 9.5pt;
+    color: #333;
+  }
+
+  blockquote cite {
+    display: block;
+    margin-top: 8px;
+    font-style: normal;
+    font-size: 8.5pt;
+    color: #666;
+    font-weight: 700;
+  }
+
+  /* ===== 통계 카드 그리드 ===== */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 20px 0;
+  }
+
+  .stat-card {
+    background: #f8f9ff;
+    border: 1px solid #dde3f0;
+    border-top: 3px solid #1a2744;
+    padding: 16px;
+    border-radius: 0 0 4px 4px;
+    text-align: center;
+  }
+
+  .stat-card .num {
+    font-size: 20pt;
+    font-weight: 900;
+    color: #1a2744;
+    line-height: 1.1;
+    margin-bottom: 6px;
+  }
+
+  .stat-card .num.red { color: #c0392b; }
+  .stat-card .num.orange { color: #d35400; }
+
+  .stat-card .lbl {
+    font-size: 8pt;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* ===== 결론 ===== */
+  .conclusion {
+    background: #1a2744;
+    color: #fff;
+    padding: 40px 50px;
+    margin-top: 40px;
+  }
+
+  .conclusion h2 {
+    font-size: 16pt;
+    font-weight: 900;
+    color: #fff;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 14px;
+    margin-bottom: 24px;
+  }
+
+  .conclusion p {
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 14px;
+  }
+
+  .conclusion .final-call {
+    background: rgba(192,57,43,0.2);
+    border: 1px solid rgba(192,57,43,0.6);
+    padding: 20px 24px;
+    border-radius: 4px;
+    margin-top: 24px;
+    font-weight: 700;
+    font-size: 10.5pt;
+    color: #fff;
+    line-height: 1.8;
+  }
+
+  /* ===== 참고문헌 ===== */
+  .references {
+    padding: 30px 0;
+  }
+
+  .references h2 {
+    font-size: 14pt;
+    font-weight: 900;
+    color: #1a2744;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #c0392b;
+    padding-bottom: 10px;
+  }
+
+  .ref-category {
+    font-size: 9pt;
+    font-weight: 700;
+    color: #c0392b;
+    letter-spacing: 0.1em;
+    margin: 16px 0 8px;
+  }
+
+  .ref-list {
+    list-style: none;
+  }
+
+  .ref-list li {
+    font-size: 8.5pt;
+    color: #444;
+    padding: 5px 0 5px 16px;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+    line-height: 1.6;
+  }
+
+  .ref-list li::before {
+    content: '·';
+    position: absolute;
+    left: 4px;
+    color: #c0392b;
+    font-weight: 900;
+  }
+
+  /* ===== 목차 ===== */
+  .toc {
+    background: #f8f9fb;
+    border: 1px solid #dde0e8;
+    padding: 30px 36px;
+    margin-bottom: 40px;
+    page-break-after: always;
+  }
+
+  .toc h2 {
+    font-size: 14pt;
+    font-weight: 900;
+    color: #1a2744;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #c0392b;
+  }
+
+  .toc-list {
+    list-style: none;
+    columns: 1;
+  }
+
+  .toc-list li {
+    padding: 5px 0;
+    font-size: 9.5pt;
+    color: #333;
+    border-bottom: 1px dotted #ccc;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .toc-list li.toc-chapter {
+    font-weight: 700;
+    color: #1a2744;
+    margin-top: 10px;
+    font-size: 10pt;
+  }
+
+  .toc-list li.toc-section {
+    padding-left: 20px;
+    color: #555;
+  }
+
+  .toc-page {
+    color: #c0392b;
+    font-weight: 700;
+    font-size: 9pt;
+  }
+
+  /* ===== 강조 수치 인라인 ===== */
+  .highlight-num {
+    font-weight: 900;
+    color: #c0392b;
+  }
+
+  .highlight-blue {
+    font-weight: 700;
+    color: #1a5276;
+  }
+
+  /* ===== 구분선 ===== */
+  hr.section-divider {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 30px 0;
+  }
+
+  /* ===== 페이지 헤더/푸터 (인쇄용) ===== */
+  .print-header {
+    display: none;
+    background: #1a2744;
+    color: rgba(255,255,255,0.7);
+    font-size: 7.5pt;
+    padding: 8px 60px;
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+  }
+
+  /* ===== 아이콘 텍스트 ===== */
+  .icon-warning { color: #e74c3c; }
+  .icon-check { color: #27ae60; }
+  .icon-cross { color: #c0392b; }
+
+  /* ===== 인쇄 미디어 쿼리 ===== */
+  @media print {
+    body { background: #fff; font-size: 9.5pt; }
+    .page { box-shadow: none; margin: 0; max-width: 100%; }
+    .body-content { padding: 30px 50px; }
+    .cover { min-height: 100vh; page-break-after: always; }
+    .exec-summary { page-break-after: always; }
+    .toc { page-break-after: always; }
+    .chapter { page-break-before: always; }
+    .chapter:first-of-type { page-break-before: auto; }
+    .print-header { display: block; }
+    @page { size: A4; margin: 15mm 15mm 20mm; }
+  }
+
+  /* ===== 비율 바 ===== */
+  .bar-container {
+    background: #e8e8e8;
+    border-radius: 3px;
+    height: 14px;
+    overflow: hidden;
+    margin: 4px 0;
+  }
+
+  .bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.8s ease;
+  }
+
+  /* ===== 비교 카드 ===== */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 20px 0;
+  }
+
+  .compare-card {
+    border: 1px solid #dde3f0;
+    border-top: 4px solid #1a2744;
+    padding: 20px;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .compare-card h4 {
+    font-size: 10.5pt;
+    font-weight: 700;
+    color: #1a2744;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e0e3eb;
+  }
+
+  .compare-card .country {
+    font-size: 8pt;
+    font-weight: 700;
+    color: #c0392b;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+  }
+
+  .compare-card p {
+    font-size: 9pt;
+    color: #444;
+    margin-bottom: 6px;
+  }
+
+  /* ===== 넘버링 리스트 ===== */
+  ol.report-list {
+    padding-left: 22px;
+    margin-bottom: 14px;
+  }
+
+  ol.report-list li {
+    padding: 4px 0;
+    font-size: 9.5pt;
+    line-height: 1.7;
+  }
+
+  ul.report-ulist {
+    padding-left: 20px;
+    margin-bottom: 14px;
+    list-style: none;
+  }
+
+  ul.report-ulist li {
+    padding: 4px 0 4px 18px;
+    font-size: 9.5pt;
+    line-height: 1.7;
+    position: relative;
+  }
+
+  ul.report-ulist li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #c0392b;
+    font-size: 9pt;
+  }
+
+  /* ===== 타임라인 ===== */
+  .timeline {
+    position: relative;
+    padding-left: 30px;
+    margin: 16px 0;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0; bottom: 0;
+    width: 2px;
+    background: #ddd;
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 16px;
+    font-size: 9.5pt;
+    line-height: 1.65;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -24px;
+    top: 5px;
+    width: 10px; height: 10px;
+    background: #c0392b;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px #c0392b;
+  }
+
+  .timeline-item .year {
+    font-weight: 900;
+    color: #c0392b;
+    margin-right: 8px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ==================== 커버페이지 ==================== -->
+<div class="cover">
+  <div>
+    <span class="cover-badge">국회 제출용 정책보고서</span>
+    <div class="cover-title-area">
+      <div class="cover-pretitle">Policy Report on Overloaded Vehicle Enforcement</div>
+      <h1 class="cover-main-title">
+        <span class="em">방치된 위협</span>
+      </h1>
+      <div class="cover-sub-title">
+        운행제한(과적) 차량 불법 운행의 실태와<br>
+        단속 강화의 긴급한 필요성에 관한 정책보고서
+      </div>
+    </div>
+    <div class="cover-warning">
+      <strong>⚠ 핵심 경고</strong><br>
+      2021~2023년 과적 단속 91,990건 중 <strong>99.6%</strong>가 과적 상태로 그대로 운행 허용되었다. 전국 384개 과적 단속검문소 중 분리운송 시설을 갖춘 곳은 <strong>단 1곳</strong>에 불과하다. 30년 이상 노후 교량은 2030년 전체의 <strong>51.3%</strong>에 달할 전망이다. 현 시스템의 붕괴는 시간문제다.
+    </div>
+  </div>
+  <div class="cover-footer">
+    <div class="cover-footer-item">
+      <span class="cover-footer-label">제출처</span>
+      <span class="cover-footer-value">국회 국토교통위원회</span>
+    </div>
+    <div class="cover-footer-item">
+      <span class="cover-footer-label">발행일</span>
+      <span class="cover-footer-value">2026년 4월</span>
+    </div>
+    <div class="cover-footer-item">
+      <span class="cover-footer-label">보고서 분류</span>
+      <span class="cover-footer-value">도로·교량 안전 정책</span>
+    </div>
+  </div>
+  <div style="margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.2);text-align:right">
+    <span style="font-size:9pt;color:rgba(255,255,255,0.55);letter-spacing:0.03em">보고서 작성</span>
+    <span style="font-size:10pt;font-weight:700;color:#ffffff;margin-left:10px;letter-spacing:0.02em">민주노총 공공운수노동조합 국토교통부새노조지부</span>
+  </div>
+</div>
+
+<!-- ==================== 목차 ==================== -->
+<div class="body-content">
+<div class="toc">
+  <h2>목 차</h2>
+  <ul class="toc-list">
+    <li class="toc-chapter"><span>요약문 (Executive Summary)</span><span class="toc-page">2</span></li>
+    <li class="toc-chapter"><span>제1장. 운행제한(과적) 차량의 법적 기준과 단속 체계 개요</span><span class="toc-page">3</span></li>
+    <li class="toc-section"><span>1-1. 법적 기준</span><span class="toc-page">3</span></li>
+    <li class="toc-section"><span>1-2. 단속 체계</span><span class="toc-page">3</span></li>
+    <li class="toc-chapter"><span>제2장. 과적 차량 불법 운행의 실태 분석</span><span class="toc-page">4</span></li>
+    <li class="toc-section"><span>2-1. 연도별 단속 현황</span><span class="toc-page">4</span></li>
+    <li class="toc-section"><span>2-2. 도로 종류별 분포</span><span class="toc-page">4</span></li>
+    <li class="toc-section"><span>2-3. 축조작 및 제도적 허점</span><span class="toc-page">4</span></li>
+    <li class="toc-chapter"><span>제3장. 과적 차량이 교량에 가하는 물리적 파괴력</span><span class="toc-page">5</span></li>
+    <li class="toc-section"><span>3-1. 4제곱 법칙(Fourth Power Law)과 도로 파손 기여도</span><span class="toc-page">5</span></li>
+    <li class="toc-section"><span>3-2. 피로손상 메커니즘</span><span class="toc-page">6</span></li>
+    <li class="toc-section"><span>3-3. 전국 교량 노후화 현황</span><span class="toc-page">6</span></li>
+    <li class="toc-chapter"><span>제4장. 과적 차량으로 인한 사고 실태</span><span class="toc-page">7</span></li>
+    <li class="toc-section"><span>4-1. 국내 주요 사고 사례</span><span class="toc-page">7</span></li>
+    <li class="toc-section"><span>4-2. 해외 주요 사고 사례</span><span class="toc-page">8</span></li>
+    <li class="toc-section"><span>4-3. 경제적 피해 규모</span><span class="toc-page">9</span></li>
+    <li class="toc-chapter"><span>제5장. 국가재정에 미치는 영향</span><span class="toc-page">9</span></li>
+    <li class="toc-section"><span>5-1. 유지보수비 급증</span><span class="toc-page">9</span></li>
+    <li class="toc-section"><span>5-2. 안전투자 삭감의 역설</span><span class="toc-page">10</span></li>
+    <li class="toc-section"><span>5-3. 과적 차량 1대의 재정손실 추산</span><span class="toc-page">10</span></li>
+    <li class="toc-section"><span>5-4. 해외 연구 및 비교</span><span class="toc-page">10</span></li>
+    <li class="toc-chapter"><span>제6장. 현행 단속 시스템의 다층적 실패 구조</span><span class="toc-page">11</span></li>
+    <li class="toc-section"><span>6-1. 인력 및 장비 부족</span><span class="toc-page">11</span></li>
+    <li class="toc-section"><span>6-2. 억제력 없는 처벌 체계</span><span class="toc-page">11</span></li>
+    <li class="toc-section"><span>6-3. 장비 및 시설 한계</span><span class="toc-page">12</span></li>
+    <li class="toc-section"><span>6-4. 관할 분리의 구조적 문제</span><span class="toc-page">12</span></li>
+    <li class="toc-chapter"><span>제7장. 해외 선진국의 과적 단속 체계</span><span class="toc-page">13</span></li>
+    <li class="toc-section"><span>7-1. 미국 / 7-2. 독일 / 7-3. 일본 / 7-4. 한국에 대한 시사점</span><span class="toc-page">13</span></li>
+    <li class="toc-chapter"><span>제8장. 정책 제언 — 5대 즉각 조치</span><span class="toc-page">14</span></li>
+    <li class="toc-chapter"><span>결 론</span><span class="toc-page">16</span></li>
+    <li class="toc-chapter"><span>참고문헌</span><span class="toc-page">17</span></li>
+  </ul>
+</div>
+
+<!-- ==================== EXECUTIVE SUMMARY ==================== -->
+<div class="exec-summary">
+  <div class="exec-summary-title">요약문 <span>Executive Summary</span></div>
+
+  <div class="exec-section-title">핵심 경고 수치 5</div>
+  <div class="exec-warning-grid">
+    <div class="exec-warning-card">
+      <div class="stat-number">99.6%</div>
+      <div class="stat-label">2021~2023년 과적 단속 91,990건 중<br>분리운송 없이 과적 상태로 그대로 운행 허용<br><em>(감사원, 2024.8.1)</em></div>
+    </div>
+    <div class="exec-warning-card">
+      <div class="stat-number">51.3%</div>
+      <div class="stat-label">2030년 전국 도로교량 중 30년 이상<br>노후 교량 비율 전망 (현재 17.1%)<br><em>(한국건설산업연구원, 2023)</em></div>
+    </div>
+    <div class="exec-warning-card">
+      <div class="stat-number">단 1곳</div>
+      <div class="stat-label">전국 384개 고속도로 과적 단속검문소 중<br>분리운송 시설 보유 검문소 수<br><em>(2025년 국정감사)</em></div>
+    </div>
+    <div class="exec-warning-card">
+      <div class="stat-number">16배</div>
+      <div class="stat-label">총중량 80톤 과적차량의 도로 파손력<br>(허용기준 40톤 대비, 4제곱 법칙 적용)<br><em>(AASHTO Road Test)</em></div>
+    </div>
+    <div class="exec-warning-card">
+      <div class="stat-number">760억</div>
+      <div class="stat-label">과적 차량으로 인한 고속도로 포장·교량<br>연간 보수비(원, 2019년 기준)<br><em>(한국도로공사, 중앙일보 2020)</em></div>
+    </div>
+  </div>
+
+  <div class="exec-section-title">현행 단속 체계의 핵심 결함</div>
+  <ul class="exec-defect-list">
+    <li>단속 적발 후 99.6%를 과적 상태로 계속 운행 허용하는 명목상 단속: 분리운송·운행중지 실행률 단 0.4%로 단속이 사실상 무의미하다.</li>
+    <li>전국 384개 단속검문소 중 분리운송 시설 보유 1곳, 81.8%(314곳)은 영구적 시설 설치가 불가능한 물리적 한계.</li>
+    <li>최고 300만 원 과태료는 물류비 절감 이익에 비해 현저히 낮아 경제적 억제력이 작동하지 않는 구조.</li>
+    <li>국토부의 분리운송 공간·시설 설치기준 미마련(감사원 확인): 법적 의무 이행 자체가 불가능한 행정적 공백.</li>
+    <li>도로공사 시설개량비 5년간 6,216억 원 삭감 등 SOC 안전투자 축소가 피해를 구조적으로 가속화.</li>
+  </ul>
+
+  <div class="exec-section-title">즉각 시행 필요 정책 제언 5대 과제</div>
+  <div class="exec-policy-grid">
+    <div class="exec-policy-card">
+      <div class="policy-num">제언 01</div>
+      <div class="policy-text">과적 단속 패러다임 전환: 형사처벌 병행 및 운송사업면허 취소·정지 제도 도입</div>
+    </div>
+    <div class="exec-policy-card">
+      <div class="policy-num">제언 02</div>
+      <div class="policy-text">전국 분리운송 거점 네트워크 구축: 고속도로·일반국도 연계 임시 야적 공간 법제화</div>
+    </div>
+    <div class="exec-policy-card">
+      <div class="policy-num">제언 03</div>
+      <div class="policy-text">WIM(Weigh-In-Motion) 자동계중 시스템 전국 확대 설치 및 무인 과태료 부과 자동화</div>
+    </div>
+    <div class="exec-policy-card">
+      <div class="policy-num">제언 04</div>
+      <div class="policy-text">D·E등급 및 30년 이상 노후 교량 긴급 정밀안전점검 실시 및 통행 하중 제한 강화</div>
+    </div>
+    <div class="exec-policy-card">
+      <div class="policy-num">제언 05</div>
+      <div class="policy-text">SOC 안전투자 삭감 즉시 중단 및 도로교량 유지관리 예산 법정 최저한도 설정 의무화</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ==================== 제1장 ==================== -->
+<div class="body-content">
+<div class="chapter">
+  <div class="chapter-header">
+    <div class="chapter-num">Chapter 1</div>
+    <h2 class="chapter-title">운행제한(과적) 차량의 법적 기준과 단속 체계 개요</h2>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">1-1. 법적 기준</h3>
+    <p>대한민국의 화물차 운행제한 기준은 「도로법」 제77조 및 같은 법 시행령 제79조에 근거한다. 법정 허용 기준은 축하중 10톤, 윤하중 5톤, 총중량 40톤이며, 이를 초과하면 '운행제한 차량', 즉 과적 차량으로 분류된다. 관할 도로관리청의 허가를 받은 특수화물의 경우 예외적으로 기준 초과 운행이 허용되나, 사전 허가 절차와 경로 지정이 수반된다.<sup class="fn">[1]</sup></p>
+    <p>과적 적발 시 도로법에 따른 과태료는 최고 300만 원이며, 행위의 중대성에 비해 처벌 수준이 현저히 낮다는 비판이 지속적으로 제기되어 왔다. 운행 중 과적 차량에 대해서는 분리운송 명령 또는 운행중지 명령을 부과할 수 있으나, 이를 이행할 시설과 제도적 기반이 극히 미흡한 실정이다.<sup class="fn">[2]</sup></p>
+
+    <table>
+      <caption>▶ 표 1-1. 화물차 운행제한 기준 및 과태료 현황</caption>
+      <tr>
+        <th>구분</th>
+        <th>기준치</th>
+        <th>적용 법령</th>
+        <th>위반 시 처분</th>
+      </tr>
+      <tr>
+        <td class="td-bold">축하중</td>
+        <td class="td-center">10톤 이하</td>
+        <td class="td-center">도로법 제77조, 시행령 제79조</td>
+        <td class="td-center">과태료 최고 300만원</td>
+      </tr>
+      <tr>
+        <td class="td-bold">윤하중</td>
+        <td class="td-center">5톤 이하</td>
+        <td class="td-center">상동</td>
+        <td class="td-center">분리운송 명령 가능</td>
+      </tr>
+      <tr>
+        <td class="td-bold">총중량</td>
+        <td class="td-center">40톤 이하</td>
+        <td class="td-center">상동</td>
+        <td class="td-center">운행중지 명령 가능</td>
+      </tr>
+      <tr>
+        <td colspan="4" style="font-size:8.5pt;color:#666;background:#f9f9f9;">※ 특수차량 사전 허가 시 기준 초과 가능. 과태료 기준: 도로법 제117조.</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">1-2. 단속 체계</h3>
+    <p>과적 차량 단속은 크게 고속도로 단속과 일반국도 단속으로 이원화되어 있다. 고속도로는 한국도로공사가 운영하는 단속검문소에서 차량 계중을 실시하며, 일반국도는 국토교통부 산하 지방국토관리청 및 지방자치단체가 주관한다. 이러한 관할 분리 구조는 체계적 관리와 데이터 통합을 방해하는 핵심 문제점이다.<sup class="fn">[3]</sup></p>
+
+    <p>단속 방식은 크게 세 가지로 구분된다. 첫째, 고정 계중소에서의 정차 계중, 둘째, 이동식 축중기를 이용한 노상 계중, 셋째, 노면에 설치된 WIM(Weigh-In-Motion) 자동계중 시스템을 통한 주행 중 계중이다. 그러나 WIM 시스템은 설치 수량이 절대적으로 부족하고, 자동 과태료 부과 연계가 미흡하여 단속 실효성이 낮다.</p>
+
+    <p>2025년 국정감사에서 확인된 바에 따르면, 전국 고속도로 과적 단속검문소 384곳 중 분리운송 시설이 있는 곳은 동서울영업소 단 1곳에 불과하다.<sup class="fn">[4]</sup> 향후 설치 가능한 검문소도 69곳(17.9%)에 그치며, 314곳(81.8%)은 공간·구조 문제로 영구적으로 분리운송 시설 설치가 불가능하다는 결론이 내려졌다. 이는 현행 단속 체계가 구조적으로 과적 운행을 묵인할 수밖에 없는 시스템임을 공식 확인한 것이다.</p>
+
+    <div class="insight-box">
+      <div class="insight-box-title">📌 구조적 모순 — 단속하되 제재 불능</div>
+      <p>과적을 적발하고도 분리운송 시설이 없어 과태료만 부과한 채 운행을 허용하는 행태는, 법적 의무 이행을 위한 물리적 인프라가 전혀 갖춰지지 않은 상황에서 발생하는 필연적 결과다. 단속 행위 자체가 최종 목적(과적 차량의 실제 운행 중단)을 달성하지 못하는 구조다.</p>
+    </div>
+  </div>
+
+  <div class="footnotes">
+    <p>[1] 도로법 제77조(차량의 운행 제한 등) 및 도로법 시행령 제79조(운행이 제한되는 차량의 기준 등)</p>
+    <p>[2] 도로법 제117조(과태료); 감사원, 「도로 안전관리 실태」 감사 결과 보고서, 2024.8.1.</p>
+    <p>[3] 중도일보 외, 국토교통부 자료(2020~2024), 2025.5 보도.</p>
+    <p>[4] 2025년 국회 국토교통위원회 국정감사 증언 및 자료.</p>
+  </div>
+</div>
+
+<!-- ==================== 제2장 ==================== -->
+<div class="chapter">
+  <div class="chapter-header">
+    <div class="chapter-num">Chapter 2</div>
+    <h2 class="chapter-title">과적 차량 불법 운행의 실태 분석</h2>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">2-1. 연도별 단속 현황</h3>
+    <p>국토교통부 자료에 따르면, 2020년부터 2024년 7월까지 최근 5년간 고속도로·일반국도·지방도를 포함한 전국 도로에서 적발된 과적 차량은 총 <strong>19만 건 이상</strong>에 달한다.<sup class="fn">[5]</sup> 연평균으로 환산하면 전국 기준 약 4만 건 수준으로, 단속이 이루어질 때마다 다수의 과적 차량이 지속적으로 적발되고 있음을 보여준다.</p>
+
+    <p>고속도로의 경우, 한국도로공사 집계에 따르면 2015년부터 2019년까지 연평균 약 32,000건의 과적 차량이 단속되었다.<sup class="fn">[6]</sup> 2024년 서울시 단속 자료는 더욱 구체적인 실태를 드러낸다. 같은 해 서울시는 총 42,361건의 화물차 단속을 실시하여 이 중 2,275건(5.4%)이 과적 차량으로 적발되었으며, 과태료 약 9.4억 원을 부과하였다.<sup class="fn">[7]</sup></p>
+
+    <table>
+      <caption>▶ 표 2-1. 과적 차량 단속 현황 요약</caption>
+      <tr>
+        <th>구분</th>
+        <th>기간</th>
+        <th>단속 건수</th>
+        <th>출처</th>
+      </tr>
+      <tr style="background:#fff3e0">
+        <td class="td-bold">전국 합계<br><span style="font-size:8.5pt;font-weight:400">(고속도로+일반국도+지방도 합산)</span></td>
+        <td class="td-center">2020~2024.7</td>
+        <td class="td-center"><strong>19만 건 이상</strong></td>
+        <td class="td-center">국토교통부 / 중도일보 2025.5</td>
+      </tr>
+      <tr>
+        <td class="td-bold">일반국도</td>
+        <td class="td-center">2020~2024.7</td>
+        <td class="td-center">29,600건</td>
+        <td class="td-center">국토교통부 / 중도일보 2025.5</td>
+      </tr>
+      <tr>
+        <td class="td-bold">고속도로</td>
+        <td class="td-center">2015~2019 (연평균)</td>
+        <td class="td-center">약 32,000건</td>
+        <td class="td-center">한국도로공사 / 중앙일보 2020.12</td>
+      </tr>
+      <tr>
+        <td class="td-bold">서울시 전체</td>
+        <td class="td-center">2024년</td>
+        <td class="td-center">42,361건 단속 / 과적 2,275건(5.4%)</td>
+        <td class="td-center">연합뉴스 2025.6</td>
+      </tr>
+      <tr>
+        <td class="td-bold">서울시 과태료</td>
+        <td class="td-center">2024년</td>
+        <td class="td-center" colspan="2">9.4억 원 부과 (과적 1건 평균 약 41만 원)</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">2-2. 도로 종류별 분포</h3>
+    <p>과적 차량은 고속도로와 일반국도 모두에서 광범위하게 적발된다. 고속도로에서의 과적 단속은 주로 IC(인터체인지) 인근 또는 TG(요금소) 부근 검문소에서 집중적으로 이루어지지만, 검문소 간 거리가 길어 우회 운행이 상대적으로 용이하다. 일반국도의 경우 이동식 계중 방식에 의존하는 비중이 높아 단속 밀도가 더욱 낮다.</p>
+
+    <p>2020년 고속도로 화물차 사고는 1,005건이었으나, 2024년에는 1,334건으로 4년 만에 32.7% 증가하였다.<sup class="fn">[8]</sup> 이는 과적 차량 단속 실효성 저하와 화물차 운행 증가가 맞물린 결과로 분석된다. 고속도로에서의 화물차 사고 증가는 단순 통계가 아닌, 정책 실패의 직접적 결과물이다.</p>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">2-3. 축조작 및 제도적 허점</h3>
+    <p>과적 차량 운행이 지속되는 배경에는 경제적 유인 구조의 비대칭성이 자리한다. 최고 300만 원의 과태료는 과적 운행으로 절감되는 물류비(복수 운행 대신 1회 과적으로 절약되는 비용)에 비해 현저히 낮아, 운수업체로서는 적발 위험을 감수하고도 과적 운행을 선택하는 것이 경제적으로 이득이 되는 구조다.<sup class="fn">[9]</sup></p>
+
+    <p>축하중 조작(축 이동 또는 공기 서스펜션 조작으로 계중소 통과 시에만 하중 분산) 문제도 심각하다. 일부 차량은 검문소 계중 시 공기 서스펜션을 이용해 축하중을 인위적으로 분산시킨 후, 통과 후 다시 본래 상태로 복귀하는 방식으로 단속을 회피한다. 현행 계중 시스템은 이 같은 능동적 회피 행태에 대응하는 기술적 수단이 부재하다.</p>
+
+    <div class="insight-box">
+      <div class="insight-box-title">📌 경제적 유인 분석</div>
+      <p>25톤 화물차 기준, 1회 과적 운행으로 절감되는 물류비는 연료비·운임·인건비 합산 수십만~수백만 원에 달하는 것으로 추산된다. 최고 300만 원 과태료는 연간 수십~수백 회 운행하는 화물차 운영사에 연간 물류비 절감액 대비 극히 소액에 불과하다. 적발 확률을 고려한 기대 비용이 물류비 절감액보다 낮은 한, 과적 운행의 경제적 유인은 제거되지 않는다.</p>
+    </div>
+  </div>
+
+  <div class="footnotes">
+    <p>[5] 중도일보, 국토교통부 자료 인용, 2025.5.</p>
+    <p>[6] 한국도로공사; 중앙일보, 「과적 화물차가 도로를 갉아먹는다」, 2020.12.</p>
+    <p>[7] 연합뉴스, 「2024년 서울시 화물차 단속 결과」, 2025.6.</p>
+    <p>[8] 2025년 국정감사 자료; 한국도로공사 교통안전 통계.</p>
+    <p>[9] 도로법 제117조; 물류업계 과적 유인 구조에 관한 학술 분석 다수.</p>
+  </div>
+</div>
+
+<!-- ==================== 제3장 ==================== -->
+<div class="chapter">
+  <div class="chapter-header">
+    <div class="chapter-num">Chapter 3</div>
+    <h2 class="chapter-title">과적 차량이 교량에 가하는 물리적 파괴력</h2>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">3-1. 4제곱 법칙(Fourth Power Law)과 도로 파손 기여도</h3>
+    <p>도로 포장의 파손 정도는 차량의 축하중에 비례하는 것이 아니라, 축하중의 <strong>4제곱에 비례</strong>한다. 이를 '4제곱 법칙(Fourth Power Law)'이라 하며, 1956~1960년 미국 일리노이주에서 실시된 AASHO Road Test를 통해 실증적으로 확립되었다. 이 연구 결과는 이후 미국 주도로 교통행정관 협회(AASHTO)에 의해 도로 설계 기준으로 공식화되었다.<sup class="fn">[10]</sup></p>
+
+    <p>4제곱 법칙의 실용적 함의는 다음과 같다. 축하중이 표준의 1.3배가 되면 도로 파손력은 1.3⁴ = 약 2.86배가 된다. 즉, 하중의 선형 증가가 기하급수적 파손을 유발한다. 건설교통부 관계자의 국회 발언에 따르면, 축하중 10톤은 승용차 7만 대 통행과 동일한 도로파손 효과를 가지며, 13톤은 21만 대, 15톤은 39만 대에 해당한다.<sup class="fn">[11]</sup></p>
+
+    <table>
+      <caption>▶ 표 3-1. 총중량별 도로 파손 기여도 비교 (4제곱 법칙 적용, 기준: 허용 40톤 = 1배)</caption>
+      <tr>
+        <th>총중량</th>
+        <th>허용 기준 대비 배율</th>
+        <th>도로 파손력 계산</th>
+        <th>파손 기여도</th>
+        <th>위험 수준</th>
+      </tr>
+      <tr>
+        <td class="td-bold td-center">40톤 (허용 기준)</td>
+        <td class="td-center">1.00배</td>
+        <td class="td-center">(40/40)⁴ = 1.00⁴</td>
+        <td class="td-center td-bold">1.0배 (기준)</td>
+        <td class="td-center" style="color:#27ae60;font-weight:700;">정상</td>
+      </tr>
+      <tr>
+        <td class="td-bold td-center">50톤</td>
+        <td class="td-center">1.25배</td>
+        <td class="td-center">(50/40)⁴ = 1.25⁴</td>
+        <td class="td-center td-warning">≈ 2.44배</td>
+        <td class="td-center" style="color:#e65100;font-weight:700;">경고</td>
+      </tr>
+      <tr>
+        <td class="td-bold td-center">60톤</td>
+        <td class="td-center">1.50배</td>
+        <td class="td-center">(60/40)⁴ = 1.50⁴</td>
+        <td class="td-center td-warning">≈ 5.06배</td>
+        <td class="td-center" style="color:#d35400;font-weight:700;">위험</td>
+      </tr>
+      <tr>
+        <td class="td-bold td-center">80톤</td>
+        <td class="td-center">2.00배</td>
+        <td class="td-center">(80/40)⁴ = 2.00⁴</td>
+        <td class="td-center td-danger">= 16배</td>
+        <td class="td-center" style="color:#c0392b;font-weight:700;">고위험</td>
+      </tr>
+      <tr>
+        <td class="td-bold td-center">100톤</td>
+        <td class="td-center">2.50배</td>
+        <td class="td-center">(100/40)⁴ = 2.50⁴</td>
+        <td class="td-center td-danger">≈ 39.1배</td>
+        <td class="td-center" style="color:#7b0000;font-weight:700;">극고위험</td>
+      </tr>
+      <tr>
+        <td colspan="5" style="font-size:8.5pt;color:#666;background:#f9f9f9;">※ 출처: AASHTO Road Test 결과 기반; 중국 2021년 붕괴 사고 과적 트럭(198톤)의 경우 (198/40)⁴ ≒ 606배에 달한다.</td>
+      </tr>
+    </table>
+
+    <p>이 법칙은 과적 단속의 시급성을 수치로 직접 증명한다. 허용 기준의 2배인 80톤 과적 차량은 정상 차량 대비 <span class="highlight-num">16배</span>의 도로 파손력을 행사한다. 중국에서 실제 발생한 198톤 과적 트럭의 경우, 이론적 파손력은 허용 기준 차량의 <span class="highlight-num">약 606배</span>에 달한다는 계산이 가능하다. 과적 차량 1대가 정상 차량 수백 대의 피해를 도로에 가하는 셈이다.</p>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">3-2. 피로손상 메커니즘</h3>
+    <p>교량 구조물의 손상은 단순히 하중 크기의 문제가 아닌, 반복 하중에 의한 <strong>피로손상(fatigue damage)</strong>의 누적 과정이다. 과적 차량의 반복 통행은 교량 주요 구조 부재(거더, 교각, 연결 용접부 등)에 설계 기준을 초과하는 응력 주기를 반복적으로 가하여, 육안으로 확인이 어려운 미세 균열을 지속적으로 확대시킨다.</p>
+
+    <p>특히 30년 이상 된 노후 교량은 당초 설계 당시 현재의 과적 화물차 증가를 전제하지 않았으며, 설계 수명 내 피로 한계치에 근접하거나 이미 초과한 상태일 가능성이 높다. 제동거리 면에서도 25톤 화물차가 총중량 40톤(정량) 상태로 시속 100km 운행 시 제동거리는 84m에 달하며, 한국교통안전공단 실험 결과 마른 노면 기준으로 정량 적재 시 33.9m, 과적 시 46.3m로 <span class="highlight-num">37% 이상 증가</span>한다.<sup class="fn">[12]</sup></p>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="num red">33.9m</div>
+        <div class="lbl">정량 적재<br>마른 노면 제동거리</div>
+      </div>
+      <div class="stat-card">
+        <div class="num red">46.3m</div>
+        <div class="lbl">과적 상태<br>마른 노면 제동거리</div>
+      </div>
+      <div class="stat-card">
+        <div class="num red">37%↑</div>
+        <div class="lbl">과적 시<br>제동거리 증가율</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">3-3. 전국 교량 노후화 현황</h3>
+    <p>한국건설산업연구원(2023년 5월)의 분석에 따르면, 2022년 기준 전국 도로교량 총수는 37,078개소이며, 이 중 30년 이상 경과한 노후 교량은 6,326개소로 전체의 17.1%를 차지한다.<sup class="fn">[13]</sup> 그런데 2020년 기준 이 비율이 이미 18.6%였다는 점과, 2030년에는 51.3%(16,310개소)까지 급증할 것으로 전망된다는 사실은, 시간이 지날수록 위험이 기하급수적으로 증가함을 의미한다.</p>
+
+    <table>
+      <caption>▶ 표 3-2. 전국 노후 교량 현황 및 전망</caption>
+      <tr>
+        <th>연도</th>
+        <th>전체 교량(개소)</th>
+        <th>30년 이상 노후(개소)</th>
+        <th>노후 비율</th>
+        <th>비고</th>
+      </tr>
+      <tr>
+        <td class="td-center">2020년</td>
+        <td class="td-center">–</td>
+        <td class="td-center">–</td>
+        <td class="td-center">18.6%</td>
+        <td class="td-center">실적</td>
+      </tr>
+      <tr>
+        <td class="td-center">2022년</td>
+        <td class="td-center td-bold">37,078</td>
+        <td class="td-center td-bold">6,326</td>
+        <td class="td-center td-bold">17.1%</td>
+        <td class="td-center">최신 실적</td>
+      </tr>
+      <tr>
+        <td class="td-center">2030년 (전망)</td>
+        <td class="td-center">–</td>
+        <td class="td-center td-danger">16,310</td>
+        <td class="td-center td-danger">51.3%</td>
+        <td class="td-center">전망(건산연)</td>
+      </tr>
+      <tr>
+        <td colspan="5" style="font-size:8.5pt;color:#666;background:#f9f9f9;">※ D·E등급 위험 교량: 144개소(과소 추계 가능성 지적). D등급 중 사용연수 30년 이상 비율: 76.0%.</td>
+      </tr>
+    </table>
+
+    <p>지역별로는 노후 교량 밀도(인구 1만명당)에서 큰 편차가 나타난다. 전국 평균은 1.22개이지만, 강원도는 4.4개로 전국 최고 수준이며, 충북, 충남, 서울 순으로 뒤를 잇는다.<sup class="fn">[14]</sup> D·E등급(위험·불량) 교량은 현재 144개소이나, 건산연은 정밀안전점검의 기준 미흡으로 인해 실제 위험 교량 수가 더 많을 수 있다고 지적한다. D등급 교량 중 사용연수 30년 이상의 비율이 76.0%에 달한다는 점은 노후화와 위험도가 직결됨을 보여준다.</p>
+
+    <div class="alert-box">
+      <div class="alert-box-title">⚠ 긴급 경고: 2030년 노후 교량 51.3% — 안전망 붕괴 임박</div>
+      <p>현재 속도로 교량 노후화가 진행되면, 2030년에는 전국 교량의 과반수가 30년 이상 노후 상태가 된다. 과적 차량의 반복 통행이 이 교량들의 피로 수명을 단축시키고 있는 현실에서, 교량 붕괴 사고는 확률의 문제가 아닌 시간의 문제다.</p>
+    </div>
+  </div>
+
+  <div class="footnotes">
+    <p>[10] AASHO Road Test(1958~1960), Highway Research Board Special Report 61, Washington D.C.; AASHTO, 「Guide for Design of Pavement Structures」.</p>
+    <p>[11] KBS 뉴스, 건설교통부 도로국 과장 발언 인용, 1999.3.8.</p>
+    <p>[12] 한국교통안전공단 실험 결과, 2020.8; YTN사이언스, 과적 화물차 제동거리 실험 보도, 2015; 중앙일보·한국도로공사 자료.</p>
+    <p>[13] 한국건설산업연구원(건산연), 「노후 교량 현황 및 안전관리 실태」, 2023.5.</p>
+    <p>[14] 상동.</p>
+  </div>
+</div>
+
+<!-- ==================== 제4장 ==================== -->
+<div class="chapter">
+  <div class="chapter-header">
+    <div class="chapter-num">Chapter 4</div>
+    <h2 class="chapter-title">과적 차량으로 인한 사고 실태</h2>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">4-1. 국내 주요 사고 사례</h3>
+
+    <div class="accident-box">
+      <div class="accident-box-title">
+        <span class="icon">⚠</span>국내 과적 관련 주요 사고 사례
+      </div>
+
+      <div class="accident-item">
+        <span class="accident-badge">1994.10.21</span>
+        <div class="accident-text">
+          <strong>성수대교 붕괴 (서울 한강)</strong><br>
+          사망 32명, 부상 17명, 총 49명 사상자 발생. 대한민국 현대사 최대의 교량 붕괴 참사. 감사원은 2024년 8월 보고서에서 "화물차 과적이 성수대교 붕괴의 주요 원인 중 하나"임을 공식 인정하였다. 30년이 지난 현재에도 그 교훈이 제도적으로 반영되지 않고 있다는 점에서 역사적 책임이 무겁다.<sup class="fn">[15]</sup>
+        </div>
+      </div>
+
+      <div class="accident-item">
+        <span class="accident-badge">2021.5.14</span>
+        <div class="accident-text">
+          <strong>강판 코일 낙하사고 (당진영덕고속도로 수리터널 인근)</strong><br>
+          25톤 화물차에 적재된 13톤 강판 코일이 주행 중 낙하하여, 후방 차량에 탑승 중이던 8세 여아가 사망하고 모친이 중상을 입었다. 과적·불량 결박의 복합 원인으로 확인되었으며, 적재물 낙하가 직접적 사망 원인이 된 전형적 과적 파생 사고다.<sup class="fn">[16]</sup>
+        </div>
+      </div>
+
+      <div class="accident-item">
+        <span class="accident-badge">2023.3.28</span>
+        <div class="accident-text">
+          <strong>대형 석재 낙하 (전북 군산시 자동차전용도로)</strong><br>
+          화물차에서 대형 석재 2개가 주행 중 낙하하여 후방 차량 4대가 파손되고 2명이 부상하였다. 과적 상태에서의 불량 결박으로 인한 적재물 탈락 사고로, 동일 유형의 사고가 반복적으로 발생하고 있음을 보여준다.<sup class="fn">[17]</sup>
+        </div>
+      </div>
+    </div>
+
+    <div class="audit-box">
+      <div class="audit-box-title">감사원 충격 발표 — 2024년 8월 1일</div>
+      <div class="audit-stat">
+        <div class="big-num">0.4%</div>
+        <div class="big-label">
+          2021년 1월~2023년 3월 과적 단속 <strong>91,990건</strong> 중<br>
+          분리운송·운행중지 명령이 실제로 이행된 비율<br>
+          (해당 건수: 355건, 나머지 91,635건은 과적 상태로 운행 허용)
+        </div>
+      </div>
+      <p style="font-size:9.5pt;color:#3a0060;margin-top:10px;">감사원은 이 결과와 함께, 국토교통부가 분리운송 공간·시설 설치 기준을 마련하지 않았다는 행정적 과실도 확인하였다. 성수대교 붕괴 원인에 과적이 포함됨을 인정한 것과 동일한 보고서에서 현재 단속 체계가 30년 전 참사의 교훈을 전혀 반영하지 않고 있음이 드러났다.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">4-2. 해외 주요 사고 사례</h3>
+
+    <div class="accident-box">
+      <div class="accident-box-title">
+        <span class="icon">🌏</span>해외 과적 교량 붕괴 주요 사례
+      </div>
+
+      <div class="accident-item">
+        <span class="accident-badge">중국 2011</span>
+        <div class="accident-text">
+          <strong>베이징 바이허교(白河橋) 붕괴</strong><br>
+          모래 160톤을 적재한 트럭이 설계하중(55톤)의 약 3배에 달하는 하중으로 교량을 통행하다 붕괴를 유발하였다. 설계하중의 3배 초과가 즉각적 붕괴로 이어진 전형적 사례다.<sup class="fn">[18]</sup>
+        </div>
+      </div>
+
+      <div class="accident-item">
+        <span class="accident-badge">중국 2019.10</span>
+        <div class="accident-text">
+          <strong>장쑤성 우시(無錫)시 고가도로 상판 붕괴</strong><br>
+          과적 화물차량 2대의 연속 통행이 고가도로 상판의 붕괴를 유발하였다. 복수 과적 차량의 동시 또는 근접 통행이 구조물에 가하는 충격은 단일 차량보다 훨씬 크다는 점을 실증적으로 보여준 사고다.<sup class="fn">[19]</sup>
+        </div>
+      </div>
+
+      <div class="accident-item">
+        <span class="accident-badge">중국 2021.12</span>
+        <div class="accident-text">
+          <strong>고속도로 교량 붕괴 — 사망 4명, 부상 8명</strong><br>
+          허용 하중 49톤의 교량에 198톤을 적재한 화물차(허용의 4배 초과)가 통행하다 붕괴가 발생하였다. 허용 기준의 4배 과적 차량의 도로 파손력은 4제곱 법칙에 따르면 256배에 달한다. 4명이 사망하고 8명이 부상하였다.<sup class="fn">[20]</sup>
+        </div>
+      </div>
+
+      <div class="accident-item">
+        <span class="accident-badge">미얀마 2018.12.14</span>
+        <div class="accident-text">
+          <strong>카친주 쿤네야웅 다리 붕괴</strong><br>
+          광물을 과적한 중국 화물차의 통행으로 다리가 붕괴되었다. 개발도상국의 취약한 도로 인프라에서 과적 차량이 주요 교량 붕괴 원인임을 보여주는 사례이며, 한국의 노후 교량 상황과 비교가 가능하다.<sup class="fn">[21]</sup>
+        </div>
+      </div>
+
+      <div class="accident-item">
+        <span class="accident-badge">미국 2007.8.1</span>
+        <div class="accident-text">
+          <strong>미네소타 I-35W 교량 붕괴 — 사망 13명, 부상 145명</strong><br>
+          미네소타주 미니애폴리스의 I-35W 교량이 붕괴되어 111대의 차량이 미시시피강으로 추락하였다. NTSB(미국 국가교통안전위원회) 조사에서 거싯 플레이트(gusset plate) 설계 결함이 주요 원인으로 지목되었으나, 교량 재포장 공사 진행 중 집중된 건설장비의 하중이 붕괴를 촉진한 것으로 분석되었다. 한국교량및구조공학회 분석은 이 사례를 과중 하중과 구조 취약성의 복합 작용 사례로 분류한다.<sup class="fn">[22]</sup>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">4-3. 경제적 피해 규모</h3>
+    <p>포트홀(도로 파임)은 과적 차량의 도로 파손이 일반 시민에게 직접적 피해로 전가되는 가장 가시적인 현상이다. 피해 배상 건수는 2017년 311건(약 2억 원)에서 2021년 1,218건(19.4억 원)으로 급증하였으며, 2024년에는 3,375건으로 2021년 대비 약 3배 수준까지 치솟았다.<sup class="fn">[23]</sup></p>
+
+    <p>2021년부터 2025년 8월까지의 누적 집계에 따르면, 총 11,032건의 포트홀 피해 배상이 이루어졌으며 배상금 총액은 약 160억 원에 달한다.<sup class="fn">[24]</sup> 포트홀 복구를 위한 도로보수비는 2021년 447억 원에서 2024년 538억 원으로 증가 추세에 있다. 여기에 과적 차량으로 인한 고속도로 포장 및 교량 보수비가 연간 760억 원(2019년 기준)에 달한다는 한국도로공사 집계까지 합산하면, 과적 차량이 국가 재정에 가하는 직접적 부담은 연간 1,000억 원 규모를 상회한다.<sup class="fn">[25]</sup></p>
+
+    <table>
+      <caption>▶ 표 4-1. 포트홀 피해 배상 현황 추이</caption>
+      <tr>
+        <th>연도</th>
+        <th>피해 배상 건수</th>
+        <th>배상 금액</th>
+        <th>전년 대비</th>
+      </tr>
+      <tr>
+        <td class="td-center">2017년</td>
+        <td class="td-center">311건</td>
+        <td class="td-center">약 2억 원</td>
+        <td class="td-center">–</td>
+      </tr>
+      <tr>
+        <td class="td-center">2021년</td>
+        <td class="td-center td-bold">1,218건</td>
+        <td class="td-center td-bold">19.4억 원</td>
+        <td class="td-center" style="color:#c0392b;font-weight:700;">+392% (2017 대비)</td>
+      </tr>
+      <tr>
+        <td class="td-center">2024년</td>
+        <td class="td-center td-danger">3,375건</td>
+        <td class="td-center td-danger">–</td>
+        <td class="td-center td-danger">+177% (2021 대비)</td>
+      </tr>
+      <tr>
+        <td class="td-center td-bold">2021~2025.8 누계</td>
+        <td class="td-center td-bold">11,032건</td>
+        <td class="td-center td-bold">약 160억 원</td>
+        <td class="td-center">–</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="footnotes">
+    <p>[15] 감사원, 「도로 안전관리 실태」 감사 결과 보고서, 2024.8.1.</p>
+    <p>[16] 중앙일보, 「당진영덕고속도로 강판 코일 낙하 사망사고」, 2021.6.13.</p>
+    <p>[17] 연합뉴스, 「전북 군산 자동차전용도로 석재 낙하 사고」, 2023.3.28.</p>
+    <p>[18] 중앙일보, 「과적 화물차가 도로를 갉아먹는다」, 2020.12.</p>
+    <p>[19] 조선일보, 「중국 교량 붕괴 사고」, 2021.12.</p>
+    <p>[20] 조선일보, 2021.12.19.</p>
+    <p>[21] 연합뉴스, 미얀마 쿤네야웅 다리 붕괴 보도, 2018.12.16.</p>
+    <p>[22] NTSB, 「Collapse of I-35W Highway Bridge Minneapolis, Minnesota」, NTSB/HAR-08/03, 2008; 한국교량및구조공학회 분석.</p>
+    <p>[23] 국토일보, 2025년 국정감사 자료 인용 보도.</p>
+    <p>[24] 상동.</p>
+    <p>[25] 한국도로공사; 중앙일보, 2020.12.</p>
+  </div>
+</div>
+
+<!-- ==================== 제5장 ==================== -->
+<div class="chapter">
+  <div class="chapter-header">
+    <div class="chapter-num">Chapter 5</div>
+    <h2 class="chapter-title">국가재정에 미치는 영향</h2>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">5-1. 유지보수비 급증</h3>
+    <p>과적 차량의 지속적 운행은 도로 포장 및 교량 구조물의 수명을 단축시켜 유지보수 비용을 구조적으로 증가시킨다. 포트홀 복구 도로보수비는 2021년 447억 원에서 2024년 538억 원으로 3년 만에 20.4% 증가하였다. 이 추세는 과적 차량 문제가 해결되지 않는 한 지속적으로 심화될 것이다.</p>
+
+    <p>과적 차량으로 인한 고속도로 포장·교량 보수비는 연간 760억 원(2019년 기준)으로 집계되었다.<sup class="fn">[26]</sup> 이 수치는 과적 단속 강화를 통해 직접 절감 가능한 비용이다. 역으로, 현재 과적 차량을 방치함으로써 매년 760억 원 이상의 재정이 낭비되고 있다는 의미이기도 하다.</p>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">5-2. 안전투자 삭감의 역설</h3>
+    <p>과적 차량으로 인한 피해가 가중되는 상황에서도, 국가 SOC 안전투자는 오히려 지속적으로 삭감되는 역설적 상황이 전개되고 있다. SOC 예산이 전체 국가 예산에서 차지하는 비중은 2010년 8.6%에서 2018년 4.4%, 2025년 3.8%로 지속 감소하였다.<sup class="fn">[27]</sup></p>
+
+    <p>2024~2028년 국가재정운용계획에 따르면, SOC 예산의 연평균 증가율은 0.4%로, 전체 예산 증가율(3.6%)의 9분의 1에 불과하다. 도로 SOC 연평균 지출 증가율은 -8.0%로 실질적으로 감소하고 있다.<sup class="fn">[28]</sup></p>
+
+    <p>한국도로공사의 2023~2027년 중장기 재무관리계획에서는 시설개량비를 5년간 총 6,216억 원 삭감하는 계획이 포함되어 있다. 구체적으로 2023년 605억 원 삭감에서 시작하여 2027년에는 연간 1,614억 원까지 삭감 규모가 확대된다.<sup class="fn">[29]</sup> 이는 노후 교량 정비와 도로 안전 개선에 써야 할 재원을 재무 건전화 명목으로 축소시키는 것으로, 장기적으로 더 큰 재정 손실로 귀결될 위험이 크다.</p>
+
+    <div class="alert-box">
+      <div class="alert-box-title">⚠ 투자 삭감과 피해 증가의 악순환</div>
+      <p>안전투자 삭감 → 도로·교량 노후화 가속 → 유지보수 비용 증가 → 예산 부족으로 추가 삭감의 악순환이 현재 진행 중이다. 과적 차량에 의한 구조물 파손이 이 악순환의 속도를 배가시키고 있다.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">5-3. 과적 차량 1대의 재정손실 추산</h3>
+    <p>4제곱 법칙을 적용하면, 총중량 80톤의 과적 차량 1대는 정상 40톤 차량의 16배에 해당하는 도로 파손력을 행사한다. 한국도로공사의 연간 760억 원 보수비를 연간 고속도로 화물차 통행량으로 나누어 단순 환산하면, 정상 화물차 1대당 연간 도로 파손 비용을 추산할 수 있으며, 80톤 과적 차량은 그 16배에 달하는 손실을 국가에 전가하는 것이다.</p>
+
+    <p>여기에 교량 구조물의 피로 손상, 사고 발생 시의 사회적 비용(인명 피해, 교통 혼잡, 긴급 복구), 보험 손실, 피해자 배상 등 간접 비용까지 합산하면 과적 차량 1대의 사회적 비용은 과태료 300만 원과는 비교할 수 없는 수준임이 명확하다.</p>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">5-4. 해외 연구 및 비교</h3>
+    <p>미국 FHWA(연방도로청)의 연구에 따르면, 과적 차량으로 인한 도로 손상 비용은 일반 화물차에 비해 수십 배에서 수백 배에 달하며, 1975년 도입된 브리지 포뮬러(Bridge Formula)는 이러한 경제적 피해를 최소화하기 위한 과학적 하중 배분 기준이다. 독일은 최대 5,000유로(약 700만 원)의 범칙금과 함께 차량 운행 금지 처분을 병행함으로써 경제적 억제력을 실질적으로 작동시키고 있다.<sup class="fn">[30]</sup></p>
+  </div>
+
+  <div class="footnotes">
+    <p>[26] 한국도로공사; 중앙일보, 2020.12.</p>
+    <p>[27] 비즈한국, 「SOC 예산 비중 추이」, 2025.2.</p>
+    <p>[28] 기획재정부, 「2024~2028년 국가재정운용계획」.</p>
+    <p>[29] 썬뉴스, 한국도로공사 2023~2027 중장기 재무관리계획 보도, 2023.11.</p>
+    <p>[30] FHWA, 「The Freight Story: A National Perspective」; 독일 도로교통법(StVZO) 관련 규정.</p>
+  </div>
+</div>
+
+<!-- ==================== 제6장 ==================== -->
+<div class="chapter">
+  <div class="chapter-header">
+    <div class="chapter-num">Chapter 6</div>
+    <h2 class="chapter-title">현행 단속 시스템의 다층적 실패 구조</h2>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">6-1. 인력 부족</h3>
+    <p>전국의 광대한 도로 연장에 비해 단속 인력과 장비는 절대적으로 부족하다. 이동식 계중 단속의 경우 소수의 단속반이 담당 구역 내를 순회하는 방식으로, 사실상 24시간 365일 전면 단속은 구조적으로 불가능하다. 과적 운수업체들이 단속 시간대와 구역을 사전에 파악하고 이를 회피하는 관행이 업계 내에서 공공연하게 이루어진다.</p>
+
+    <p>2020년 고속도로 화물차 사고 1,005건에서 2024년 1,334건으로의 증가는 단속 인프라가 교통 성장을 따라가지 못하고 있음을 시사한다.<sup class="fn">[31]</sup> 단속 인력의 양적 확충 없이는 과적 적발률의 실질적 개선을 기대하기 어렵다.</p>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">6-2. 억제력 없는 처벌 체계</h3>
+    <p>현행 과적 처벌 체계의 가장 심각한 문제는 경제적 억제력의 부재다. 도로법상 최고 과태료 300만 원은 과적 운행으로 절감되는 물류비에 비해 현저히 낮다. 화물 운송업계에서 과적은 이미 "걸려도 남는 장사"라는 인식이 구조화되어 있다.<sup class="fn">[32]</sup></p>
+
+    <p>독일의 경우 최대 5,000유로(약 700만 원)의 범칙금에 더해 차량 운행 금지 1~3개월이 병행된다. 미국은 위반 시 벌금, 차량 억류, 사업면허 취소가 가능하다. 일본은 사전 경로 허가 위반 시 업무 정지 처분을 내릴 수 있다. 이들 국가에서 공통적으로 나타나는 특징은 <strong>형사처벌 또는 영업 정지를 통한 강력한 억제력</strong>이다. 한국은 이러한 억제 수단이 부재하여 단속이 곧 범칙금 수납 절차로 전락해 있다.</p>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">6-3. 장비 및 시설 한계</h3>
+    <p>2025년 국정감사에서 확인된 핵심 사실은 전국 384개 단속검문소 중 분리운송 시설이 갖춰진 곳이 동서울영업소 단 1곳(0.26%)이라는 점이다.<sup class="fn">[33]</sup> 향후 설치 가능한 검문소도 69곳(17.9%)에 불과하며, 314곳(81.8%)은 지형·공간 제약으로 영구적으로 시설 설치가 불가능하다는 판정을 받았다.</p>
+
+    <p>이는 법령상 부여된 분리운송 명령 권한이 물리적으로 이행 불가능한 사문화된 조문임을 행정 스스로 인정한 것과 같다. 감사원 역시 이 문제를 지적하며, 국토교통부가 분리운송 공간·시설 설치 기준을 마련하지 않았다는 행정적 직무 태만을 확인하였다.<sup class="fn">[34]</sup></p>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="num red">384</div>
+        <div class="lbl">전국 고속도로<br>과적 단속검문소 총수</div>
+      </div>
+      <div class="stat-card">
+        <div class="num red">1</div>
+        <div class="lbl">분리운송 시설<br>보유 검문소 수</div>
+      </div>
+      <div class="stat-card">
+        <div class="num red">81.8%</div>
+        <div class="lbl">영구 시설 설치<br>불가 검문소 비율</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">6-4. 관할 분리의 구조적 문제</h3>
+    <p>과적 단속 업무가 한국도로공사(고속도로), 국토교통부 지방국토관리청(일반국도), 지방자치단체(지방도)로 분산되어 있어, 단속 데이터의 통합 관리와 체계적 분석이 어렵다. 함진규 한국도로공사 사장은 2024년 10월 21일 국정감사에서 "과적차량의 분리 운송을 확대하겠다", "국도 등과의 연계가 필요하다"고 증언하였다.<sup class="fn">[35]</sup> 이 발언은 현재 고속도로와 일반국도의 과적 단속 체계가 연계되어 있지 않음을 사장 스스로 인정한 것이다.</p>
+
+    <p>관할 분리 구조는 단순한 정보 공유 부재를 넘어, 구조적 주행 경로 조작이라는 실질적 위협을 가능하게 한다. 일반국도 이동식 단속을 회피하려는 고중량 과적 차량의 일부는 고속도로 톨게이트의 고정식 축중기(WIM)를 <strong>축 조작을 통해 통과한 후 고속도로를 불법 이용</strong>하는 방식을 택한다. 고속도로 톨게이트 WIM은 주행 중인 차량의 축하중을 순간적으로 측정하기 때문에, 공기 서스펜션 압력 상승 또는 가변축(리프트 축) 전개를 통한 순간적 하중 분산 조작에 무방비 상태다. 조작된 하중 수치로 단속망을 통과한 차량은 톨게이트 통과 직후 가변축을 접거나 서스펜션을 원상 복귀시켜 원래의 과적 상태로 고속도로를 주행한다.<sup class="fn">[35-1]</sup></p>
+
+    <p>현재 전국 고속도로 톨게이트에는 이와 같은 <strong>축 조작 행위를 실시간으로 탐지할 수 있는 시스템이 갖춰져 있지 않다.</strong> 이는 고속도로 과적 단속의 근본적 허점으로, 고중량 과적 차량의 고속도로 진입을 구조적으로 허용하는 결과를 낳는다. 고속도로는 일반국도에 비해 제한속도가 높아, 과적 차량의 운동에너지 및 제동거리가 일반도로보다 훨씬 크게 증가하여 대형 추돌사고의 위험이 배가된다. 또한 고속도로 교량은 고속·반복 하중에 노출되어 피로 손상 누적 속도가 빠른데, 고중량 과적 차량의 반복 통행은 교량 설계 수명을 급격히 단축시킨다.</p>
+
+    <div class="accident-box" style="border-color:#8e1a1a">
+      <div class="accident-box-title" style="background:#8e1a1a;color:#ffffff;border-bottom-color:#ffffff">⚠️ 고속도로 톨게이트 축 조작 통과 — 단계별 위협 메커니즘</div>
+      <table style="margin:10px 0;width:100%">
+        <tr>
+          <th style="width:22%;background:#6d1414;color:#fff;padding:7px 10px;text-align:center">단계</th>
+          <th style="background:#6d1414;color:#fff;padding:7px 10px;text-align:center">과적 차량의 조작 행태 및 결과</th>
+        </tr>
+        <tr>
+          <td style="padding:7px 10px;font-weight:700;color:#8e1a1a;text-align:center;border:1px solid #f5c6cb">① 톨게이트 진입 전</td>
+          <td style="padding:7px 10px;border:1px solid #f5c6cb">공기 서스펜션 압력 상승 또는 가변축(리프트 축) 전개 → 전체 축에 하중 분산 → 개별 축하중을 기준치(10톤) 이하로 낮춤</td>
+        </tr>
+        <tr style="background:#fff8f8">
+          <td style="padding:7px 10px;font-weight:700;color:#8e1a1a;text-align:center;border:1px solid #f5c6cb">② WIM 통과 시</td>
+          <td style="padding:7px 10px;border:1px solid #f5c6cb">분산된 축하중이 기준치 이하로 측정 → 단속 바이패스 → <strong>정상 차량으로 판정되어 고속도로 진입</strong></td>
+        </tr>
+        <tr>
+          <td style="padding:7px 10px;font-weight:700;color:#8e1a1a;text-align:center;border:1px solid #f5c6cb">③ 톨게이트 통과 후</td>
+          <td style="padding:7px 10px;border:1px solid #f5c6cb">가변축 접음 / 서스펜션 정상화 → 원래 과적 상태로 복귀 → <strong>고속도로 전 구간을 고중량 과적 상태로 주행</strong></td>
+        </tr>
+        <tr style="background:#fff8f8">
+          <td style="padding:7px 10px;font-weight:700;color:#8e1a1a;text-align:center;border:1px solid #f5c6cb">④ 현재 대응 능력</td>
+          <td style="padding:7px 10px;border:1px solid #f5c6cb">고속도로 톨게이트에 <strong>축 조작 탐지 시스템 전무</strong> → 고중량 과적 차량의 고속도로 진입 구조적으로 무방비</td>
+        </tr>
+      </table>
+      <p style="margin-top:8px;font-size:9.5pt"><strong>이 구조적 허점이 갖는 위험성은 이중적이다.</strong> 첫째, 고속도로는 일반국도 대비 제한속도가 높아 과적 차량의 운동에너지 및 제동거리가 급증하여 대형 추돌사고 위험이 배가된다. 둘째, 고속도로 교량은 장대 스팬·고속 반복 하중에 노출되어 있어, 선형적 피로 스트레스가 누적되기 쉽다. 고중량 과적 차량의 반복 통행은 교량 설계 수명을 급격히 단축시킨다.</p>
+    </div>
+  </div>
+
+  <div class="footnotes">
+    <p>[31] 2025년 국정감사 자료; 한국도로공사 교통안전 통계.</p>
+    <p>[32] 중앙일보 취재 보도(2020.12); 물류업계 관계자 인터뷰 다수.</p>
+    <p>[33] 2025년 국정감사 국토교통위원회 자료.</p>
+    <p>[34] 감사원, 2024.8.1 보고서.</p>
+    <p>[35] 파이낸셜뉴스, 「함진규 한국도로공사 사장 국정감사 증언」, 2024.10.21.</p>
+    <p>[35-1] 운행제한 단속 실무 및 축 조작 회피 기법에 관한 현장 사례 분석; 나무위키 「과적」 항목 기술 서술 참조.</p>
+  </div>
+</div>
+
+<!-- ==================== 제7장 ==================== -->
+<div class="chapter">
+  <div class="chapter-header">
+    <div class="chapter-num">Chapter 7</div>
+    <h2 class="chapter-title">해외 선진국의 과적 단속 체계</h2>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">7-1. 미국</h3>
+    <p>미국은 1975년 연방 도로법(Federal-Aid Highway Act)에 근거한 <strong>브리지 포뮬러(Bridge Formula, 23 U.S.C. § 127)</strong>를 통해 총중량 80,000파운드(약 36톤)의 법정 상한과 함께 축간 거리에 따른 정밀한 하중 배분 기준을 적용한다. 이 공식은 교량 구조물에 대한 하중의 물리적 영향을 직접 반영한 과학적 기준이다.<sup class="fn">[36]</sup></p>
+
+    <p>연방도로청(FHWA)은 상업용 화물차 운행 안전을 총괄하며, 연방상업차량 안전청(FMCSA)이 과적 단속과 사업자 자격 관리를 담당한다. 위반 시 단순 벌금 외에 차량 억류(vehicle out-of-service), 사업 면허 취소까지 가능하여 강력한 억제력을 갖춘다. 주(州) 간선도로에는 WIM 시스템이 광범위하게 설치되어 자동 적발과 연계된다.</p>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">7-2. 독일</h3>
+    <p>독일은 도로교통법(StVZO) 제3장에서 과적 행위에 대한 형사처벌과 행정처분을 병행한다. 과적 위반에 대한 최대 범칙금은 5,000유로(약 700만 원)이며, 차량 운행 금지 1~3개월을 부과할 수 있다. 이는 한국의 과태료 최고 300만 원 대비 2배 이상의 금전적 제재이며, 여기에 영업 정지의 실질적 타격이 더해진다.<sup class="fn">[37]</sup></p>
+
+    <p>독일의 고속도로(Autobahn) 관리 체계에서는 화물차 통행 모니터링이 상시 운영되며, 계중 위반 차량은 즉시 대기 구역으로 유도되어 하중 조정 또는 운행 금지 조치가 이루어진다. 행정 효율성과 집행력이 결합된 체계다.</p>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">7-3. 일본</h3>
+    <p>일본은 <strong>특수차량 통행허가제</strong>를 통해 허용 기준을 초과하는 화물차는 사전에 경로를 신청하고 승인을 받아야 한다. 국토교통성이 직접 단속권을 보유하며, 허가받지 않은 경로로의 통행 또는 허가 조건 위반 시 업무 정지 처분이 내려진다. 사후 단속이 아닌 사전 허가를 통한 예방적 관리가 핵심이다.<sup class="fn">[38]</sup></p>
+
+    <p>일본은 또한 도로·교량 안전점검 체계(정기점검 5년 주기 의무화)를 법제화하여, 화물차 하중과 교량 구조 안전의 연계 관리를 체계화하고 있다.</p>
+  </div>
+
+  <div class="section">
+    <h3 class="section-title">7-4. 해외 제도의 한국에 대한 시사점</h3>
+
+    <table>
+      <caption>▶ 표 7-1. 주요국 과적 단속 제도 비교</caption>
+      <tr>
+        <th>구분</th>
+        <th>미국</th>
+        <th>독일</th>
+        <th>일본</th>
+        <th>한국 (현행)</th>
+      </tr>
+      <tr>
+        <td class="td-bold">허용 총중량</td>
+        <td class="td-center">약 36톤 (80,000 lbs)</td>
+        <td class="td-center">40톤 (EU 기준)</td>
+        <td class="td-center">20톤 (일반)<br>축하중 10톤</td>
+        <td class="td-center">40톤<br>축하중 10톤</td>
+      </tr>
+      <tr>
+        <td class="td-bold">최대 제재 수준</td>
+        <td class="td-center">벌금 + 차량 억류 + 면허 취소</td>
+        <td class="td-center">5,000유로 + 운행 금지 1~3개월</td>
+        <td class="td-center">업무 정지 처분</td>
+        <td class="td-center td-danger">과태료 최고 300만원</td>
+      </tr>
+      <tr>
+        <td class="td-bold">분리운송 시설</td>
+        <td class="td-center">주요 거점 다수 보유</td>
+        <td class="td-center">고속도로 대기 구역 의무화</td>
+        <td class="td-center">사전 허가로 사전 예방</td>
+        <td class="td-center td-danger">전국 1곳(단 0.26%)</td>
+      </tr>
+      <tr>
+        <td class="td-bold">단속 방식</td>
+        <td class="td-center">WIM 광범위 설치 + 자동 부과</td>
+        <td class="td-center">상시 모니터링 + 즉시 유도</td>
+        <td class="td-center">사전 허가 + 국토성 직접 단속</td>
+        <td class="td-center">이동식 단속 위주, WIM 미흡</td>
+      </tr>
+      <tr>
+        <td class="td-bold">형사처벌</td>
+        <td class="td-center">가능</td>
+        <td class="td-center">병행</td>
+        <td class="td-center">부분 가능</td>
+        <td class="td-center td-danger">없음 (행정처분 한정)</td>
+      </tr>
+      <tr>
+        <td colspan="5" style="font-size:8.5pt;color:#666;background:#f9f9f9;">※ 자료: FHWA(미국), StVZO(독일), 국토交通省(일본), 도로법(한국)</td>
+      </tr>
+    </table>
+
+    <div class="insight-box">
+      <div class="insight-box-title">📌 핵심 시사점</div>
+      <p>미국·독일·일본 모두 형사처벌 또는 영업 정지라는 실질적 억제력을 갖추고 있으며, 단속 인프라(WIM, 분리운송 시설, 허가 시스템)를 법제와 함께 정비하였다. 한국은 이 두 가지 — 억제력과 인프라 — 모두에서 취약하다. 단속 강화 정책은 반드시 처벌 강화(억제력)와 인프라 구축(집행 가능성)을 동시에 추진해야 효과를 발휘한다.</p>
+    </div>
+  </div>
+
+  <div class="footnotes">
+    <p>[36] 23 U.S.C. § 127 (Federal Bridge Formula); FHWA, 「Bridge Formula Weights」, 2015.</p>
+    <p>[37] 독일 도로교통법(Straßenverkehrs-Zulassungs-Ordnung, StVZO) 제3장 관련 규정.</p>
+    <p>[38] 일본 국토交通省, 「特殊車両通行許可制度」 관련 운용 지침.</p>
+  </div>
+</div>
+
+<!-- ==================== 제8장 ==================== -->
+<div class="chapter">
+  <div class="chapter-header">
+    <div class="chapter-num">Chapter 8</div>
+    <h2 class="chapter-title">정책 제언 — 5대 즉각 조치</h2>
+  </div>
+
+  <p>이하 5개의 정책 제언은 모두 단기(1~2년 이내) 착수가 가능하며, 현재의 단속 실패 구조를 구체적으로 개선하기 위한 실행 가능한 방안이다. 각 제언은 현황 문제, 개선 방향, 소요 예산, 기대 효과를 포함한다.</p>
+
+  <!-- 제언 1 -->
+  <div class="policy-box">
+    <div class="policy-box-title">제언 1. 과적 단속 패러다임 전환: 형사처벌 병행 및 운송사업면허 취소·정지 도입</div>
+
+    <div class="policy-box-subtitle">현황 문제</div>
+    <p>현행 도로법상 최고 과태료 300만 원은 과적 운행 시 절감되는 물류비 대비 경제적 억제력이 전무하다. 형사처벌 조항이 없어 반복 위반에 대한 가중 처벌이 불가능하며, 사업자 자격 제재와의 연계도 없다.</p>
+
+    <div class="policy-box-subtitle">개선 방향</div>
+    <p>① 도로법 개정을 통해 상습·고중량 과적(허용 기준 150% 초과 등)에 대한 형사처벌(벌금 또는 징역) 조항 신설. ② 화물운수사업법 개정을 통해 과적 적발 횟수에 따른 운송사업면허 정지(3회)·취소(5회 이상) 연계. ③ 최고 과태료를 1,000만 원으로 상향 조정. ④ 화주(荷主)에 대한 연대 책임제 도입으로 적재 지시 단계부터 법적 책임 부과.</p>
+
+    <div class="policy-box-subtitle">소요 예산</div>
+    <p>입법 비용 중심으로, 법 개정 자체의 재정 소요는 미미하다. 집행 인력 강화 비용은 하단 제언 3과 통합 추진.</p>
+
+    <div class="policy-box-subtitle">기대 효과</div>
+    <p>과적 운행의 경제적 유인 구조를 역전시켜 자발적 준수율 향상. 독일·미국 사례에서 강력한 처벌 체계 도입 후 과적 적발 건수가 감소(준수율 향상)한 효과가 확인됨.</p>
+  </div>
+
+  <!-- 제언 2 -->
+  <div class="policy-box">
+    <div class="policy-box-title">제언 2. 전국 분리운송 거점 네트워크 구축: 고속도로·일반국도 연계 임시 야적 공간 법제화</div>
+
+    <div class="policy-box-subtitle">현황 문제</div>
+    <p>전국 384개 단속검문소 중 분리운송 시설 보유 1곳, 81.8%는 영구 설치 불가. 분리운송 명령이 법적으로는 존재하나 물리적으로 이행 불가능한 사문화 상태. 감사원이 국토부의 시설기준 미마련 확인.</p>
+
+    <div class="policy-box-subtitle">개선 방향</div>
+    <p>① 단속검문소 인근 휴게소, IC 인근 부지, 일반국도 주변 공공 용지를 임시 야적 공간으로 지정·활용하는 법적 근거 마련. ② 고속도로와 인접 일반국도 구간의 연계 유도로 및 대기 구역 설치. ③ 국토교통부는 시설 설치 표준기준을 즉시 마련(감사원 지적 사항 이행). ④ 분리 운송 이후 재적재까지의 절차를 법령으로 표준화.</p>
+
+    <div class="policy-box-subtitle">소요 예산</div>
+    <p>거점 당 평균 부지 정비 및 시설 비용 추산 5~10억 원, 전국 100개 거점 기준 500~1,000억 원. 연간 760억 원 도로 보수비 절감을 고려하면 2년 내 투자 회수 가능.</p>
+
+    <div class="policy-box-subtitle">기대 효과</div>
+    <p>분리운송 명령의 실질적 집행 가능성 확보. 과적 단속 99.6% 허용 문제의 근본적 해결. 도로·교량 보수비 연간 수백억 원 절감.</p>
+  </div>
+
+  <!-- 제언 3 -->
+  <div class="policy-box">
+    <div class="policy-box-title">제언 3. WIM(Weigh-In-Motion) 자동계중 시스템 전국 확대 및 무인 과태료 부과 자동화</div>
+
+    <div class="policy-box-subtitle">현황 문제</div>
+    <p>현재 단속은 이동식 계중 방식 위주로, 단속 인력 부족과 회피 용이성이 구조적 한계. WIM 시스템은 설치 수가 절대 부족하고 자동 과태료 부과 연계가 미비하다.</p>
+
+    <div class="policy-box-subtitle">개선 방향</div>
+    <p>① 주요 고속도로 IC 진입로 및 일반국도 주요 구간에 WIM 시스템 집중 설치. ② WIM 계측 결과를 차량 번호판 인식 시스템과 연계하여 자동 과태료 부과 체계 구축. ③ 차량 공기 서스펜션 조작 탐지 기술(동적 계중 분석) 도입으로 축하중 조작 회피 방지. ④ 단속 데이터를 국토부-도로공사-지자체가 공유하는 통합 관리 시스템 구축.</p>
+
+    <div class="policy-box-subtitle">소요 예산</div>
+    <p>WIM 장비 1기 설치 비용 약 2~5억 원, 전국 주요 구간 500기 설치 시 1,000~2,500억 원. 무인 단속으로 장기적 인건비 절감 및 단속 효율 극대화.</p>
+
+    <div class="policy-box-subtitle">기대 효과</div>
+    <p>24시간 365일 자동 단속으로 적발 회피 근본 차단. 단속 데이터 통합으로 과적 현황 과학적 관리 가능. 미국 WIM 도입 후 과적 차량 비율 유의미한 감소 사례 참조.</p>
+  </div>
+
+  <!-- 제언 4 -->
+  <div class="policy-box">
+    <div class="policy-box-title">제언 4. D·E등급 및 30년 이상 노후 교량 긴급 정밀안전점검 실시 및 통행 하중 제한 강화</div>
+
+    <div class="policy-box-subtitle">현황 문제</div>
+    <p>D·E등급 위험 교량 144개소, D등급 중 76%가 30년 이상 노후. 교량 안전등급 판정 기준의 과소 추계 가능성을 건산연이 지적. 2030년 전망 51.3% 노후 교량에 대한 선제 조치 없음.</p>
+
+    <div class="policy-box-subtitle">개선 방향</div>
+    <p>① D·E등급 교량 144개소에 대해 즉시 긴급 정밀안전점검 실시 및 필요 시 통행 제한·폐쇄. ② 30년 이상 노후 교량 6,326개소에 대한 하중 통과 제한(예: 최대 20톤) 표지판 설치 의무화. ③ 교량 안전등급 판정 기준 재정비 및 과적 누적 손상 반영 방법론 도입. ④ 5년 주기 교량 정밀점검 의무화(일본 사례 준용).</p>
+
+    <div class="policy-box-subtitle">소요 예산</div>
+    <p>긴급 정밀점검 1개소 당 약 0.5~2억 원, 144개소 기준 72~288억 원. 교량 붕괴 1건 발생 시 사회적 비용(인명·복구·교통 혼잡)이 수천억 원에 달함을 감안하면 예방투자의 경제성이 압도적이다.</p>
+
+    <div class="policy-box-subtitle">기대 효과</div>
+    <p>성수대교급 교량 붕괴 참사의 선제적 예방. 노후 교량의 과중 하중 노출 감소를 통한 구조 수명 연장. 국민 안전에 대한 정부 신뢰 회복.</p>
+  </div>
+
+  <!-- 제언 5 -->
+  <div class="policy-box">
+    <div class="policy-box-title">제언 5. SOC 안전투자 삭감 즉시 중단 및 도로교량 유지관리 예산 법정 최저한도 설정 의무화</div>
+
+    <div class="policy-box-subtitle">현황 문제</div>
+    <p>SOC 예산 비중 2010년 8.6% → 2025년 3.8%로 지속 하락. 도로공사 시설개량비 5년간 6,216억 원 삭감 계획 진행 중. 도로 SOC 연평균 지출 증가율 -8.0%로 실질 감소. 유지보수비 수요는 증가하는데 공급은 감소하는 구조적 불균형.</p>
+
+    <div class="policy-box-subtitle">개선 방향</div>
+    <p>① 「도로법」 또는 별도 법률에 도로교량 유지관리비의 법정 최저한도(예: 도로자산 대비 일정 비율)를 규정. ② 한국도로공사 시설개량비 삭감 계획 즉시 철회 및 교량 안전 예산 환원. ③ SOC 예산 배분 시 안전 유지관리 예산을 신규 건설 예산에 우선하여 보호하는 원칙 법제화. ④ 국회 국토교통위원회의 SOC 예산 심의 시 노후 교량 비율 및 유지관리 투자 수준을 의무 검토 사항으로 제도화.</p>
+
+    <div class="policy-box-subtitle">소요 예산</div>
+    <p>삭감 철회에 따른 추가 예산: 2027년 기준 연간 1,614억 원 복원. 그러나 이는 과적 방치로 인한 연간 도로 보수비(760억 원 이상) 및 교량 사고 방지 효과를 고려하면 순 비용이 아니라 투자다.</p>
+
+    <div class="policy-box-subtitle">기대 효과</div>
+    <p>도로·교량 안전 유지관리의 재정적 기반 확보. 노후화 속도와 유지관리 투자 사이의 구조적 불균형 해소. 장기적으로 대형 사고 발생 시의 천문학적 복구·배상 비용 선제 차단.</p>
+  </div>
+
+  <div class="footnotes">
+    <p>※ 제언 1~5의 근거 자료는 본문 각 장의 각주 및 참고문헌을 참조.</p>
+  </div>
+</div>
+
+<!-- ==================== 결론 ==================== -->
+<div class="conclusion">
+  <h2>결 론</h2>
+  <p>1994년 성수대교 붕괴는 한국 사회에 도로 안전의 중요성을 각인시킨 비극이었다. 사망 32명, 부상 17명, 총 49명의 사상자를 낸 이 참사의 원인 중 하나로 화물차 과적이 지목되었음은 30년이 지난 2024년 감사원 보고서에서 재차 공식 확인되었다. 같은 해인 1995년 삼풍백화점 붕괴 또한 구조 안전 불감증과 무분별한 과부하가 복합된 인재(人災)였다. 두 참사는 "위험을 알면서도 묵인"하는 행정 문화가 얼마나 치명적인 결과를 초래하는지를 대한민국 전체에 새기는 계기였다.</p>
+
+  <p>그러나 30년이 지난 현재, 동일한 구조의 실패가 반복되고 있다. 과적 단속 99.6% 허용, 분리운송 시설 전국 1곳, 노후 교량 2030년 51.3% 전망, SOC 투자 지속 삭감 — 이 수치들은 하나하나가 붕괴 위험의 정량적 지표다. 과적 차량이 매일 전국의 노후 교량 위를 달리고 있으며, 그것을 막을 수 있는 제도적 장치는 사실상 작동하지 않고 있다.</p>
+
+  <p>교량은 한번 붕괴되면 돌이킬 수 없다. 다음 성수대교는 어느 교량이 될지 모른다. 충북, 강원, 서울, 충남의 노후 교량 밀집 지역을 매일 과적 화물차가 통과하고 있다. 2030년 전국 교량의 51.3%가 30년 이상 노후 상태가 되는 그 날까지, 이 보고서가 촉구하는 5대 정책이 실행되지 않는다면, 그 결과에 대한 책임은 현재의 국회와 행정부가 함께 져야 한다.</p>
+
+  <div class="final-call">
+    국회 국토교통위원회는 이 보고서가 제시한 5대 정책 제언을 즉각 입법 의제로 채택하고, 다음 회기 내에 관련 법률 개정안 심의에 착수할 것을 촉구한다. 분리운송 시설 기준 미마련이라는 감사원 지적 사항에 대한 국토교통부의 시정 조치 이행 여부를 반드시 점검하라. 과적 차량 1대가 16~39배의 도로 파손력을 행사하는 동안 국가는 매년 760억 원을 복구 비용으로 지출하고 있다. 예방 투자는 복구 비용의 수배에 달하는 경제적 합리성을 가진다. 더 이상의 지체는 또 다른 성수대교를 기다리는 것과 다르지 않다.
+  </div>
+</div>
+
+<!-- ==================== 참고문헌 ==================== -->
+<div class="references">
+  <h2>참고문헌</h2>
+
+  <div class="ref-category">정부 기관 자료</div>
+  <ul class="ref-list">
+    <li>감사원, 「도로 안전관리 실태」 감사 결과 보고서, 2024.8.1.</li>
+    <li>국토교통부, 일반국도 과적 차량 단속 현황 자료 (2020~2024.7). 중도일보 인용.</li>
+    <li>기획재정부, 「2024~2028년 국가재정운용계획」.</li>
+    <li>한국도로공사, 고속도로 과적 단속 통계 (2015~2019). 중앙일보·파이낸셜뉴스 인용.</li>
+    <li>한국도로공사, 「2023~2027년 중장기 재무관리계획」. 썬뉴스(2023.11) 인용.</li>
+    <li>한국도로공사, 화물차 사고 통계 (2020~2024). 2025년 국정감사 자료.</li>
+    <li>한국교통안전공단, 과적 화물차 제동거리 실험 결과, 2020.8.</li>
+    <li>국회 국토교통위원회 국정감사 자료, 2025년 10월.</li>
+    <li>함진규 한국도로공사 사장 국정감사 증언, 2024.10.21. (파이낸셜뉴스 보도)</li>
+  </ul>
+
+  <div class="ref-category">연구 보고서</div>
+  <ul class="ref-list">
+    <li>한국건설산업연구원(건산연), 「노후 교량 현황 및 안전관리 실태」, 2023.5.</li>
+    <li>NTSB(미국 국가교통안전위원회), 「Collapse of I-35W Highway Bridge Minneapolis, Minnesota, August 1, 2007」, NTSB/HAR-08/03, 2008.</li>
+    <li>FHWA(미국 연방도로청), 「Bridge Formula Weights」, 2015.</li>
+    <li>AASHTO, 「Guide for Design of Pavement Structures」; AASHO Road Test (1956~1960) 결과.</li>
+  </ul>
+
+  <div class="ref-category">언론 보도</div>
+  <ul class="ref-list">
+    <li>중앙일보, 「과적 화물차가 도로를 갉아먹는다」, 2020.12. (한국도로공사 자료 포함)</li>
+    <li>중앙일보, 「당진영덕고속도로 강판 코일 낙하 사망사고」, 2021.6.13.</li>
+    <li>조선일보, 「중국 고속도로 교량 붕괴 사고」, 2021.12.19.</li>
+    <li>연합뉴스, 「2024년 서울시 화물차 단속 결과」, 2025.6.</li>
+    <li>연합뉴스, 「전북 군산 자동차전용도로 석재 낙하 사고」, 2023.3.28.</li>
+    <li>연합뉴스, 「미얀마 카친주 쿤네야웅 다리 붕괴」, 2018.12.16.</li>
+    <li>중도일보, 「최근 5년 과적 차량 단속 19만 건」, 2025.5.</li>
+    <li>국토일보, 포트홀 피해 배상 현황 보도, 2025년 국정감사 인용.</li>
+    <li>비즈한국, 「SOC 예산 비중 추이 분석」, 2025.2.</li>
+    <li>썬뉴스, 「한국도로공사 시설개량비 삭감 계획」, 2023.11.</li>
+    <li>파이낸셜뉴스, 「함진규 한국도로공사 사장 국정감사 발언」, 2024.10.21.</li>
+    <li>KBS 뉴스, 건설교통부 과장 과적 도로 파손 발언 인용, 1999.3.8.</li>
+    <li>YTN사이언스, 과적 화물차 제동거리 실험 보도, 2015.</li>
+  </ul>
+
+  <div class="ref-category">법령</div>
+  <ul class="ref-list">
+    <li>도로법 제77조(차량의 운행 제한), 제117조(과태료); 도로법 시행령 제79조(운행이 제한되는 차량의 기준)</li>
+    <li>화물자동차 운수사업법</li>
+    <li>23 U.S.C. § 127 (Federal Bridge Formula, 미국)</li>
+    <li>StVZO(독일 도로교통법) 제3장 관련 규정</li>
+    <li>일본 국토交通省, 특수차량 통행허가제 관련 운용 지침</li>
+  </ul>
+</div>
+
+</div><!-- .body-content -->
+</div><!-- .page -->
+
+</body>
+</html>
